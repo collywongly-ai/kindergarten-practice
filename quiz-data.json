@@ -1,0 +1,1332 @@
+{
+  "chinese": [
+    {
+      "q": "哪一個詞是學校的老師？",
+      "opts": [
+        "老師",
+        "月亮",
+        "月餅"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "課室裏一起學習的是？",
+      "opts": [
+        "汽車",
+        "同學",
+        "月亮"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "我們上課的地方叫？",
+      "opts": [
+        "操場",
+        "課室",
+        "月亮"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "可以跑跳玩耍的地方？",
+      "opts": [
+        "課室",
+        "操場",
+        "月餅"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "中秋節會吃的美食？",
+      "opts": [
+        "月餅",
+        "皮球",
+        "書本"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "晚上天上會發光的是？",
+      "opts": [
+        "月亮",
+        "操場",
+        "課室"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "學校裏有____",
+      "opts": [
+        "月亮",
+        "同學",
+        "雲"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "課室裏有____",
+      "opts": [
+        "老師",
+        "星星",
+        "海"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "中秋節，我和家人吃？",
+      "opts": [
+        "月餅",
+        "雪糕",
+        "麵包"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "中秋節會玩？",
+      "opts": [
+        "燈籠",
+        "足球",
+        "積木"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "誰在課室教小朋友？",
+      "opts": [
+        "老師",
+        "司機",
+        "廚師"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "學校一同讀書叫？",
+      "opts": [
+        "同學",
+        "醫生",
+        "消防員"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "上課的房間是？",
+      "opts": [
+        "課室",
+        "廚房",
+        "睡房"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "學校跑步玩耍在？",
+      "opts": [
+        "操場",
+        "廁所",
+        "圖書館"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "中秋節食品？",
+      "opts": [
+        "月餅",
+        "粽子",
+        "湯圓"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "夜晚掛在天上？",
+      "opts": [
+        "月亮",
+        "太陽",
+        "星星"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "課室裏看見？",
+      "opts": [
+        "老師",
+        "魚兒",
+        "小鳥"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "操場會看見？",
+      "opts": [
+        "同學",
+        "月亮",
+        "太陽"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "中秋節晚上看？",
+      "opts": [
+        "月亮",
+        "雨",
+        "雲"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "中秋玩什麼？",
+      "opts": [
+        "燈籠",
+        "風箏",
+        "皮球"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "____在課室教我們",
+      "opts": [
+        "老師",
+        "爸爸",
+        "警察"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "學校和我一起讀書的是？",
+      "opts": [
+        "同學",
+        "小狗",
+        "貓咪"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "我們進入____上課",
+      "opts": [
+        "課室",
+        "公園",
+        "商場"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "下課我們去____跑跳",
+      "opts": [
+        "操場",
+        "家裡",
+        "餐廳"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "中秋節我吃____",
+      "opts": [
+        "月餅",
+        "薯條",
+        "漢堡"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "晚上抬頭看見圓圓的？",
+      "opts": [
+        "月亮",
+        "太陽",
+        "燈泡"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "課室有老師和？",
+      "opts": [
+        "同學",
+        "老虎",
+        "獅子"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "中秋節我和家人玩？",
+      "opts": [
+        "燈籠",
+        "積木",
+        "拼圖"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "哪個地方屬於學校？",
+      "opts": [
+        "課室",
+        "廚房",
+        "浴室"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "哪個地方可以跑？",
+      "opts": [
+        "操場",
+        "睡房",
+        "書房"
+      ],
+      "correct": 0
+    }
+  ],
+  "math": [
+    {
+      "q": "哪一個是雙數？",
+      "opts": [
+        "1",
+        "2",
+        "3"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "哪一個是單數？",
+      "opts": [
+        "2",
+        "4",
+        "5"
+      ],
+      "correct": 2
+    },
+    {
+      "q": "兩個一數：2，4，？",
+      "opts": [
+        "5",
+        "6",
+        "7"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "3可以分成1和？",
+      "opts": [
+        "1",
+        "2",
+        "4"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "4的組合：2加？等於4",
+      "opts": [
+        "1",
+        "2",
+        "3"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "5可以分成2和？",
+      "opts": [
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "6可以分成3和？",
+      "opts": [
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "哪個數不大於6？",
+      "opts": [
+        "7",
+        "6",
+        "8"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "兩個一數接在6之後是？",
+      "opts": [
+        "7",
+        "8",
+        "9"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "6可以分成1和？",
+      "opts": [
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "4是單數還是雙數？",
+      "opts": [
+        "單數",
+        "雙數",
+        "不知道"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "哪個是單數？",
+      "opts": [
+        "6",
+        "7",
+        "8"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "兩個一數0,2,4,？",
+      "opts": [
+        "5",
+        "6",
+        "9"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "2可以分成1和？",
+      "opts": [
+        "1",
+        "2",
+        "3"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "5可以分成3和？",
+      "opts": [
+        "1",
+        "2",
+        "4"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "6可以分成2和？",
+      "opts": [
+        "3",
+        "4",
+        "5"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "1+?=6",
+      "opts": [
+        "4",
+        "5",
+        "2"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "3+?=6",
+      "opts": [
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "兩個一數8之後是？",
+      "opts": [
+        "9",
+        "10",
+        "11"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "5是單數還是雙數？",
+      "opts": [
+        "單數",
+        "雙數",
+        "都不是"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "哪個屬於雙數？",
+      "opts": [
+        "3",
+        "4",
+        "5"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "哪個屬於單數？",
+      "opts": [
+        "8",
+        "9",
+        "10"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "4可以分成1和？",
+      "opts": [
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "4可以分成3和？",
+      "opts": [
+        "1",
+        "2",
+        "3"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "6可以分成4和？",
+      "opts": [
+        "1",
+        "2",
+        "3"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "2+?=4",
+      "opts": [
+        "1",
+        "2",
+        "3"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "1+?=3",
+      "opts": [
+        "1",
+        "2",
+        "3"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "5+?=6",
+      "opts": [
+        "0",
+        "1",
+        "2"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "兩個一數，4後面是？",
+      "opts": [
+        "5",
+        "6",
+        "7"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "3是？",
+      "opts": [
+        "單數",
+        "雙數",
+        "偶數"
+      ],
+      "correct": 0
+    }
+  ],
+  "vocab": [
+    {
+      "iconSvg": "<svg class=\"q-icon-main\" viewBox=\"0 0 80 80\"><rect x=\"4\" y=\"4\" width=\"72\" height=\"12\" fill=\"#8B4513\"/><rect x=\"8\" y=\"16\" width=\"8\" height=\"48\" fill=\"#8B4513\"/><rect x=\"64\" y=\"16\" width=\"8\" height=\"48\" fill=\"#8B4513\"/></svg>",
+      "answer": "a desk",
+      "distract": [
+        "a chair",
+        "pencil"
+      ]
+    },
+    {
+      "iconSvg": "<svg class=\"q-icon-main\" viewBox=\"0 0 80 80\"><rect x=\"20\" y=\"4\" width=\"40\" height=\"16\" fill=\"#4472c4\"/><rect x=\"24\" y=\"20\" width=\"32\" height=\"24\" fill=\"#6096e0\"/><rect x=\"24\" y=\"44\" width=\"8\" height=\"28\" fill=\"#4472c4\"/><rect x=\"48\" y=\"44\" width=\"8\" height=\"28\" fill=\"#4472c4\"/></svg>",
+      "answer": "a chair",
+      "distract": [
+        "a desk",
+        "glue"
+      ]
+    },
+    {
+      "iconSvg": "<svg class=\"q-icon-main\" viewBox=\"0 0 80 80\"><rect x=\"28\" y=\"8\" width=\"24\" height=\"56\" fill=\"#ffc107\"/><rect x=\"32\" y=\"2\" width=\"16\" height=\"8\" fill=\"#777\"/></svg>",
+      "answer": "glue",
+      "distract": [
+        "eraser",
+        "ruler"
+      ]
+    },
+    {
+      "iconSvg": "<svg class=\"q-icon-main\" viewBox=\"0 0 80 80\"><polygon points=\"16,40 64,20 64,60\" fill=\"#ffcc00\"/></svg>",
+      "answer": "pencil",
+      "distract": [
+        "glue",
+        "a chair"
+      ]
+    },
+    {
+      "iconSvg": "<svg class=\"q-icon-main\" viewBox=\"0 0 80 80\"><rect x=\"16\" y=\"30\" width=\"48\" height=\"24\" rx=\"6\" fill=\"#ff77aa\"/></svg>",
+      "answer": "eraser",
+      "distract": [
+        "pencil",
+        "a desk"
+      ]
+    },
+    {
+      "iconSvg": "<svg class=\"q-icon-main\" viewBox=\"0 0 80 80\"><rect x=\"4\" y=\"34\" width=\"72\" height=\"12\" fill=\"#dddddd\"/></svg>",
+      "answer": "ruler",
+      "distract": [
+        "glue",
+        "eraser"
+      ]
+    },
+    {
+      "iconSvg": "<svg class=\"q-icon-main\" viewBox=\"0 0 80 80\"><circle cx=\"16\" cy=\"16\" r=\"8\" fill=\"#555\"/><rect x=\"10\" y=\"24\" width=\"12\" height=\"24\" fill=\"#555\"/><circle cx=\"40\" cy=\"16\" r=\"8\" fill=\"#555\"/><rect x=\"34\" y=\"24\" width=\"12\" height=\"24\" fill=\"#555\"/></svg>",
+      "answer": "line up",
+      "distract": [
+        "sit down",
+        "tidy up"
+      ]
+    },
+    {
+      "iconSvg": "<svg class=\"q-icon-main\" viewBox=\"0 0 80 80\"><circle cx=\"24\" cy=\"14\" r=\"8\" fill=\"#333\"/><path d=\"M16 24 L32 24 L28 50 L20 50 Z\" fill=\"#333\"/></svg>",
+      "answer": "sit down",
+      "distract": [
+        "stand up",
+        "line up"
+      ]
+    },
+    {
+      "iconSvg": "<svg class=\"q-icon-main\" viewBox=\"0 0 80 80\"><circle cx=\"24\" cy=\"12\" r=\"8\" fill=\"#333\"/><rect x=\"18\" y=\"22\" width=\"12\" height=\"46\" fill=\"#333\"/></svg>",
+      "answer": "stand up",
+      "distract": [
+        "sit down",
+        "listen"
+      ]
+    },
+    {
+      "iconSvg": "<svg class=\"q-icon-main\" viewBox=\"0 0 80 80\"><rect x=\"12\" y=\"12\" width=\"56\" height=\"48\" fill=\"#cce5ff\"/></svg>",
+      "answer": "tidy up",
+      "distract": [
+        "line up",
+        "stand up"
+      ]
+    },
+    {
+      "iconSvg": "<svg class=\"q-icon-main\" viewBox=\"0 0 80 80\"><circle cx=\"40\" cy=\"30\" r=\"14\" fill=\"#f8bbd0\"/></svg>",
+      "answer": "listen",
+      "distract": [
+        "tidy up",
+        "ruler"
+      ]
+    },
+    {
+      "iconSvg": "<svg class=\"q-icon-main\" viewBox=\"0 0 80 80\"><rect x=\"4\" y=\"4\" width=\"72\" height=\"12\" fill=\"#8B4513\"/><rect x=\"8\" y=\"16\" width=\"8\" height=\"48\" fill=\"#8B4513\"/><rect x=\"64\" y=\"16\" width=\"8\" height=\"48\" fill=\"#8B4513\"/></svg>",
+      "answer": "a desk",
+      "distract": [
+        "glue",
+        "ruler"
+      ]
+    },
+    {
+      "iconSvg": "<svg class=\"q-icon-main\" viewBox=\"0 0 80 80\"><rect x=\"20\" y=\"4\" width=\"40\" height=\"16\" fill=\"#4472c4\"/><rect x=\"24\" y=\"20\" width=\"32\" height=\"24\" fill=\"#6096e0\"/><rect x=\"24\" y=\"44\" width=\"8\" height=\"28\" fill=\"#4472c4\"/><rect x=\"48\" y=\"44\" width=\"8\" height=\"28\" fill=\"#4472c4\"/></svg>",
+      "answer": "a chair",
+      "distract": [
+        "eraser",
+        "pencil"
+      ]
+    },
+    {
+      "iconSvg": "<svg class=\"q-icon-main\" viewBox=\"0 0 80 80\"><rect x=\"28\" y=\"8\" width=\"24\" height=\"56\" fill=\"#ffc107\"/><rect x=\"32\" y=\"2\" width=\"16\" height=\"8\" fill=\"#777\"/></svg>",
+      "answer": "glue",
+      "distract": [
+        "a desk",
+        "tidy up"
+      ]
+    },
+    {
+      "iconSvg": "<svg class=\"q-icon-main\" viewBox=\"0 0 80 80\"><polygon points=\"16,40 64,20 64,60\" fill=\"#ffcc00\"/></svg>",
+      "answer": "pencil",
+      "distract": [
+        "line up",
+        "a chair"
+      ]
+    },
+    {
+      "iconSvg": "<svg class=\"q-icon-main\" viewBox=\"0 0 80 80\"><rect x=\"16\" y=\"30\" width=\"48\" height=\"24\" rx=\"6\" fill=\"#ff77aa\"/></svg>",
+      "answer": "eraser",
+      "distract": [
+        "listen",
+        "glue"
+      ]
+    },
+    {
+      "iconSvg": "<svg class=\"q-icon-main\" viewBox=\"0 0 80 80\"><rect x=\"4\" y=\"34\" width=\"72\" height=\"12\" fill=\"#dddddd\"/></svg>",
+      "answer": "ruler",
+      "distract": [
+        "stand up",
+        "pencil"
+      ]
+    },
+    {
+      "iconSvg": "<svg class=\"q-icon-main\" viewBox=\"0 0 80 80\"><circle cx=\"16\" cy=\"16\" r=\"8\" fill=\"#555\"/><rect x=\"10\" y=\"24\" width=\"12\" height=\"24\" fill=\"#555\"/><circle cx=\"40\" cy=\"16\" r=\"8\" fill=\"#555\"/><rect x=\"34\" y=\"24\" width=\"12\" height=\"24\" fill=\"#555\"/></svg>",
+      "answer": "line up",
+      "distract": [
+        "ruler",
+        "eraser"
+      ]
+    },
+    {
+      "iconSvg": "<svg class=\"q-icon-main\" viewBox=\"0 0 80 80\"><circle cx=\"24\" cy=\"14\" r=\"8\" fill=\"#333\"/><path d=\"M16 24 L32 24 L28 50 L20 50 Z\" fill=\"#333\"/></svg>",
+      "answer": "sit down",
+      "distract": [
+        "glue",
+        "tidy up"
+      ]
+    },
+    {
+      "iconSvg": "<svg class=\"q-icon-main\" viewBox=\"0 0 80 80\"><circle cx=\"24\" cy=\"12\" r=\"8\" fill=\"#333\"/><rect x=\"18\" y=\"22\" width=\"12\" height=\"46\" fill=\"#333\"/></svg>",
+      "answer": "stand up",
+      "distract": [
+        "a desk",
+        "listen"
+      ]
+    },
+    {
+      "iconSvg": "<svg class=\"q-icon-main\" viewBox=\"0 0 80 80\"><rect x=\"12\" y=\"12\" width=\"56\" height=\"48\" fill=\"#cce5ff\"/></svg>",
+      "answer": "tidy up",
+      "distract": [
+        "pencil",
+        "a chair"
+      ]
+    },
+    {
+      "iconSvg": "<svg class=\"q-icon-main\" viewBox=\"0 0 80 80\"><circle cx=\"40\" cy=\"30\" r=\"14\" fill=\"#f8bbd0\"/></svg>",
+      "answer": "listen",
+      "distract": [
+        "eraser",
+        "line up"
+      ]
+    },
+    {
+      "iconSvg": "<svg class=\"q-icon-main\" viewBox=\"0 0 80 80\"><polygon points=\"16,40 64,20 64,60\" fill=\"#ffcc00\"/></svg>",
+      "answer": "pencil",
+      "distract": [
+        "stand up",
+        "ruler"
+      ]
+    },
+    {
+      "iconSvg": "<svg class=\"q-icon-main\" viewBox=\"0 0 80 80\"><rect x=\"16\" y=\"30\" width=\"48\" height=\"24\" rx=\"6\" fill=\"#ff77aa\"/></svg>",
+      "answer": "eraser",
+      "distract": [
+        "sit down",
+        "glue"
+      ]
+    },
+    {
+      "iconSvg": "<svg class=\"q-icon-main\" viewBox=\"0 0 80 80\"><rect x=\"4\" y=\"34\" width=\"72\" height=\"12\" fill=\"#dddddd\"/></svg>",
+      "answer": "ruler",
+      "distract": [
+        "tidy up",
+        "a desk"
+      ]
+    },
+    {
+      "iconSvg": "<svg class=\"q-icon-main\" viewBox=\"0 0 80 80\"><rect x=\"28\" y=\"8\" width=\"24\" height=\"56\" fill=\"#ffc107\"/><rect x=\"32\" y=\"2\" width=\"16\" height=\"8\" fill=\"#777\"/></svg>",
+      "answer": "glue",
+      "distract": [
+        "listen",
+        "line up"
+      ]
+    },
+    {
+      "iconSvg": "<svg class=\"q-icon-main\" viewBox=\"0 0 80 80\"><rect x=\"20\" y=\"4\" width=\"40\" height=\"16\" fill=\"#4472c4\"/><rect x=\"24\" y=\"20\" width=\"32\" height=\"24\" fill=\"#6096e0\"/><rect x=\"24\" y=\"44\" width=\"8\" height=\"28\" fill=\"#4472c4\"/><rect x=\"48\" y=\"44\" width=\"8\" height=\"28\" fill=\"#4472c4\"/></svg>",
+      "answer": "a chair",
+      "distract": [
+        "stand up",
+        "eraser"
+      ]
+    },
+    {
+      "iconSvg": "<svg class=\"q-icon-main\" viewBox=\"0 0 80 80\"><rect x=\"4\" y=\"4\" width=\"72\" height=\"12\" fill=\"#8B4513\"/><rect x=\"8\" y=\"16\" width=\"8\" height=\"48\" fill=\"#8B4513\"/><rect x=\"64\" y=\"16\" width=\"8\" height=\"48\" fill=\"#8B4513\"/></svg>",
+      "answer": "a desk",
+      "distract": [
+        "pencil",
+        "sit down"
+      ]
+    },
+    {
+      "iconSvg": "<svg class=\"q-icon-main\" viewBox=\"0 0 80 80\"><circle cx=\"16\" cy=\"16\" r=\"8\" fill=\"#555\"/><rect x=\"10\" y=\"24\" width=\"12\" height=\"24\" fill=\"#555\"/><circle cx=\"40\" cy=\"16\" r=\"8\" fill=\"#555\"/><rect x=\"34\" y=\"24\" width=\"12\" height=\"24\" fill=\"#555\"/></svg>",
+      "answer": "line up",
+      "distract": [
+        "glue",
+        "ruler"
+      ]
+    },
+    {
+      "iconSvg": "<svg class=\"q-icon-main\" viewBox=\"0 0 80 80\"><circle cx=\"24\" cy=\"14\" r=\"8\" fill=\"#333\"/><path d=\"M16 24 L32 24 L28 50 L20 50 Z\" fill=\"#333\"/></svg>",
+      "answer": "sit down",
+      "distract": [
+        "a desk",
+        "listen"
+      ]
+    }
+  ],
+  "engsent": [
+    {
+      "q": "Where is the pencil <svg style=\"width:28px;height:20px;vertical-align:middle;\" viewBox=\"0 0 40 30\"><polygon points=\"8,15 32,8 32,22\" fill=\"#ffcc00\"/></svg>? It is ___ the desk.",
+      "opts": [
+        "on",
+        "cat",
+        "dog"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Where is eraser <svg style=\"width:28px;height:20px;vertical-align:middle;\" viewBox=\"0 0 40 30\"><rect x=\"8\" y=\"10\" width=\"24\" height=\"12\" rx=\"3\" fill=\"#ff77aa\"/></svg>? It is ___ the desk.",
+      "opts": [
+        "on",
+        "under",
+        "bird"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "___ , please!（坐下 🪑）",
+      "opts": [
+        "Sit down",
+        "Stand up",
+        "Line up"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "___ , please!（起立 🧍）",
+      "opts": [
+        "Sit down",
+        "Stand up",
+        "Tidy up"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "___ , please!（排隊 🧍‍♂️🧍‍♀️）",
+      "opts": [
+        "Line up",
+        "Listen",
+        "Sit down"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "___ , please!（收拾 📦）",
+      "opts": [
+        "Tidy up",
+        "Stand up",
+        "Line up"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Where is the ruler <svg style=\"width:28px;height:20px;vertical-align:middle;\" viewBox=\"0 0 40 30\"><rect x=\"2\" y=\"12\" width=\"36\" height=\"6\" fill=\"#dddddd\"/></svg>? It is ___ the chair.",
+      "opts": [
+        "under",
+        "apple",
+        "book"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Where is glue <svg style=\"width:28px;height:20px;vertical-align:middle;\" viewBox=\"0 0 40 30\"><rect x=\"14\" y=\"4\" width=\"12\" height=\"22\" fill=\"#ffc107\"/></svg>? It is ___ the desk.",
+      "opts": [
+        "on",
+        "egg",
+        "pen"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "___ , please!（留心聽 👂）",
+      "opts": [
+        "Listen",
+        "Tidy up",
+        "Sit down"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Where is the eraser <svg style=\"width:28px;height:20px;vertical-align:middle;\" viewBox=\"0 0 40 30\"><rect x=\"8\" y=\"10\" width=\"24\" height=\"12\" rx=\"3\" fill=\"#ff77aa\"/></svg>? It is ___ the desk.",
+      "opts": [
+        "under",
+        "milk",
+        "bird"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Where is pencil? It is ___ the chair.",
+      "opts": [
+        "on",
+        "dog",
+        "cat"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Where is glue? It is ___ the chair.",
+      "opts": [
+        "under",
+        "fish",
+        "bird"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "___ , please! 請坐下",
+      "opts": [
+        "Sit down",
+        "Stand up",
+        "Tidy up"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "___ , please! 請起立",
+      "opts": [
+        "Stand up",
+        "Sit down",
+        "Listen"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "___ , please! 請排隊",
+      "opts": [
+        "Line up",
+        "Sit down",
+        "Tidy up"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "___ , please! 請收拾",
+      "opts": [
+        "Tidy up",
+        "Line up",
+        "Stand up"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "___ , please! 請留心聽",
+      "opts": [
+        "Listen",
+        "Sit down",
+        "Line up"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Where is ruler? It is ___ the desk.",
+      "opts": [
+        "on",
+        "cat",
+        "dog"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Where is eraser? It is ___ the chair.",
+      "opts": [
+        "under",
+        "apple",
+        "egg"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Where is glue? It is ___ the chair.",
+      "opts": [
+        "on",
+        "milk",
+        "pen"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Where is pencil? It is ___ the desk.",
+      "opts": [
+        "under",
+        "bird",
+        "fish"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Where is the desk? It is ___ the room.",
+      "opts": [
+        "in",
+        "cat",
+        "dog"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "___ , please! Sit down",
+      "opts": [
+        "Sit down",
+        "Stand up",
+        "Listen"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "___ , please! Stand up",
+      "opts": [
+        "Stand up",
+        "Sit down",
+        "Tidy up"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "___ , please! Line up",
+      "opts": [
+        "Line up",
+        "Listen",
+        "Sit down"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "___ , please! Tidy up",
+      "opts": [
+        "Tidy up",
+        "Stand up",
+        "Line up"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "___ , please! Listen",
+      "opts": [
+        "Listen",
+        "Sit down",
+        "Tidy up"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Where is ruler? It is ___ the desk.",
+      "opts": [
+        "under",
+        "cat",
+        "pen"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Where is eraser? It is ___ the desk.",
+      "opts": [
+        "on",
+        "dog",
+        "milk"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Where is glue? It is ___ the chair.",
+      "opts": [
+        "on",
+        "bird",
+        "apple"
+      ],
+      "correct": 0
+    }
+  ],
+  "mandarin": [
+    {
+      "q": "國慶節會看？",
+      "opts": [
+        "煙花",
+        "皮球",
+        "書包"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "升旗會看到？",
+      "opts": [
+        "中國國旗",
+        "月亮",
+        "月餅"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "香港的旗是？",
+      "opts": [
+        "香港區旗",
+        "玩具旗",
+        "畫旗"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "國慶會有？",
+      "opts": [
+        "國慶表演",
+        "放學",
+        "睡覺"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "十月一日是？",
+      "opts": [
+        "國慶節",
+        "中秋節",
+        "新年"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "我會跟家人去看？",
+      "opts": [
+        "煙花",
+        "麵包",
+        "汽水"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "升旗禮要看？",
+      "opts": [
+        "國旗",
+        "月亮",
+        "星星"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "國慶表演可以看？",
+      "opts": [
+        "節目",
+        "吃飯",
+        "睡覺"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "我會跟爸爸去看？",
+      "opts": [
+        "升旗禮",
+        "看卡通",
+        "玩玩具"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "國慶節，我們看？",
+      "opts": [
+        "煙花",
+        "雪糕",
+        "糖果"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "國慶節放？",
+      "opts": [
+        "煙花",
+        "風箏",
+        "皮球"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "升旗禮升起？",
+      "opts": [
+        "中國國旗",
+        "玩具",
+        "畫"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "香港特別旗幟叫？",
+      "opts": [
+        "香港區旗",
+        "國旗",
+        "彩旗"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "國慶節有精彩？",
+      "opts": [
+        "國慶表演",
+        "遊戲",
+        "玩具"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "哪一天是國慶節？",
+      "opts": [
+        "十月一日",
+        "九月一日",
+        "八月一日"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "國慶和家人觀看？",
+      "opts": [
+        "煙花",
+        "電影",
+        "動畫"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "參加升旗禮看？",
+      "opts": [
+        "國旗",
+        "月亮",
+        "雲"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "國慶表演觀看？",
+      "opts": [
+        "節目",
+        "玩具",
+        "積木"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "爸爸帶我參加？",
+      "opts": [
+        "升旗禮",
+        "遊樂場",
+        "商場"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "國慶夜晚看漂亮？",
+      "opts": [
+        "煙花",
+        "星星",
+        "月亮"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "國慶節看什麼？",
+      "opts": [
+        "煙花",
+        "小說",
+        "圖畫"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "升旗看見什麼？",
+      "opts": [
+        "中國國旗",
+        "燈籠",
+        "月餅"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "代表香港的旗？",
+      "opts": [
+        "香港區旗",
+        "國旗",
+        "彩旗"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "國慶節觀賞什麼表演？",
+      "opts": [
+        "國慶表演",
+        "魔術",
+        "雜技"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "國慶節是幾月幾日？",
+      "opts": [
+        "十月一日",
+        "一月一日",
+        "五月一日"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "國慶我和媽媽看？",
+      "opts": [
+        "煙花",
+        "卡通",
+        "動畫"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "升旗禮最重要看？",
+      "opts": [
+        "國旗",
+        "燈光",
+        "音樂"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "國慶表演有很多？",
+      "opts": [
+        "節目",
+        "食物",
+        "飲品"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "一家人可以參加？",
+      "opts": [
+        "升旗禮",
+        "郊遊",
+        "購物"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "國慶夜晚空中燦爛的是？",
+      "opts": [
+        "煙花",
+        "星星",
+        "月亮"
+      ],
+      "correct": 0
+    }
+  ]
+}
