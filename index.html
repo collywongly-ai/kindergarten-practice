@@ -1,812 +1,96 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0"/>
-  <title>9月高班評估輕鬆溫習小樂園｜奧特曼陪我溫書</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0">
+  <title>高班溫習小樂園｜奧特曼陪我溫書</title>
   <style>
-    :root{
-      --navy:#102a56;
-      --blue:#1769d2;
-      --blue-dark:#0d438f;
-      --red:#e83d4f;
-      --yellow:#ffd85a;
-      --sky:#eaf6ff;
-      --ink:#183153;
-      --muted:#6c7b91;
-      --white:#fff;
-      --shadow:0 12px 28px rgba(13,67,143,.14);
-    }
+    :root{--navy:#102a56;--blue:#1769d2;--blue-dark:#0d438f;--red:#c9283d;--yellow:#ffd85a;--ink:#183153;--muted:#5b6b82;--white:#fff;--shadow:0 12px 28px rgba(13,67,143,.14)}
     *{box-sizing:border-box;margin:0;padding:0;font-family:"Noto Sans TC",system-ui,-apple-system,BlinkMacSystemFont,sans-serif}
-    body{
-      min-height:100vh;
-      padding:18px 12px 32px;
-      color:var(--ink);
-      background:
-        radial-gradient(circle at 12% 8%, rgba(255,216,90,.42) 0 5px, transparent 6px),
-        radial-gradient(circle at 88% 18%, rgba(232,61,79,.18) 0 7px, transparent 8px),
-        linear-gradient(145deg,#f4fbff 0%,#fff8ef 52%,#eef5ff 100%);
-    }
-    body:before,body:after{
-      content:"✦";
-      position:fixed;
-      color:rgba(23,105,210,.13);
-      font-size:88px;
-      pointer-events:none;
-      z-index:-1;
-    }
-    body:before{left:2%;top:42%;transform:rotate(-15deg)}
-    body:after{right:3%;bottom:12%;transform:rotate(18deg)}
-    .banner{
-      max-width:1000px;
-      margin:0 auto 16px;
-      min-height:190px;
-      padding:22px 60px 18px;
-      text-align:center;
-      position:relative;
-      overflow:hidden;
-      border:4px solid var(--navy);
-      border-radius:30px;
-      background:linear-gradient(135deg,#1769d2 0%,#2689ee 58%,#70c8ff 100%);
-      box-shadow:0 10px 0 #0b3d83,var(--shadow);
-      isolation:isolate;
-    }
-    .banner:before{
-      content:"";
-      position:absolute;
-      width:240px;height:240px;
-      right:-70px;top:-110px;
-      border:26px solid rgba(255,255,255,.2);
-      border-radius:50%;
-      z-index:-1;
-    }
-    .banner:after{
-      content:"✦  ✧  ✦  ✧  ✦";
-      position:absolute;
-      left:0;right:0;bottom:10px;
-      color:rgba(255,255,255,.42);
-      letter-spacing:18px;
-      font-size:13px;
-    }
-    .ultra-svg{width:82px;height:82px;filter:drop-shadow(0 5px 0 rgba(13,67,143,.35));animation:bounceIn 1.2s ease-out}
-    .ultra-float{position:absolute;width:48px;height:48px;filter:drop-shadow(0 4px 0 rgba(13,67,143,.25));animation:float 3s ease-in-out infinite alternate}
-    @keyframes bounceIn{0%{transform:scale(.2);opacity:0}60%{transform:scale(1.15)}100%{transform:scale(1);opacity:1}}
-    @keyframes float{0%{transform:translateY(0) rotate(-6deg)}100%{transform:translateY(-10px) rotate(6deg)}}
-    h1{position:relative;z-index:1;color:#fff;font-size:clamp(22px,4vw,34px);line-height:1.35;letter-spacing:.04em;text-shadow:0 3px 0 var(--navy);margin:8px 0 3px}
-    .banner-kicker{position:relative;z-index:1;color:#dff3ff;font-size:12px;font-weight:900;letter-spacing:.2em}
-    .banner-subtitle{position:relative;z-index:1;color:#fff;font-size:14px;font-weight:700;opacity:.95}
-    h2{display:flex;align-items:center;gap:8px;color:var(--navy);font-size:clamp(19px,3vw,25px);line-height:1.35}
-    .tab-wrap{max-width:1000px;margin:0 auto 18px;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:9px}
-    .tab-btn{
-      min-height:52px;padding:10px 8px;border:3px solid var(--navy);border-radius:17px;
-      background:var(--white);color:var(--navy);font-size:14px;font-weight:800;cursor:pointer;
-      transition:transform .2s,background .2s,color .2s,box-shadow .2s;box-shadow:0 5px 0 #b6c9e3;
-    }
-    .tab-btn:hover{transform:translateY(-3px);background:#fff4bc}
-    .tab-btn.active{color:#fff;background:var(--red);border-color:#a91e32;box-shadow:0 5px 0 #a91e32;transform:translateY(-2px)}
-    .panel{
-      max-width:1000px;margin:0 auto;padding:22px;border:3px solid #d2e4fa;border-radius:26px;
-      background:rgba(255,255,255,.94);display:none;animation:fadeIn .4s ease;box-shadow:var(--shadow)
-    }
-    .panel.show{display:block}
-    @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-    .stat-row{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0}
-    .stat-item{flex:1;min-width:150px;padding:13px 10px;border:2px solid #c7def7;border-radius:17px;background:linear-gradient(135deg,#f4fbff,#e4f2ff);text-align:center;font-size:15px;font-weight:800;color:var(--blue-dark);box-shadow:0 5px 0 #d8e9f9}
-    .checkin-wrap{display:flex;gap:9px;margin:14px 0 18px;justify-content:center}
-    .checkin-dot{width:34px;height:34px;border-radius:50%;border:3px solid #bfd0e5;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#8292aa;background:#f9fcff}
-    .checkin-dot.done{color:#fff;background:var(--red);border-color:#a91e32;box-shadow:0 3px 0 #a91e32}
-    .level-box{position:relative;margin:18px 0;padding:22px 18px;border:3px solid var(--yellow);border-radius:24px;background:linear-gradient(145deg,#fffdf5,#fff5c9);box-shadow:0 7px 0 #efc93f}
-    .level-box:before{content:"✦";position:absolute;right:16px;top:8px;color:#f3b900;font-size:26px}
-    .level-title{margin-bottom:9px;color:var(--blue-dark);font-size:16px;font-weight:800}
-    .q-index{display:inline-block;margin-bottom:9px;padding:5px 11px;border-radius:99px;background:var(--red);color:#fff;font-size:14px;font-weight:800}
-    .question-text{min-height:32px;margin:8px 0 18px;color:var(--navy);font-size:clamp(20px,4vw,27px);font-weight:800;line-height:1.5}
-    .q-icon-block{text-align:center;margin:8px 0 18px;padding:10px}
-    .q-icon-main{width:106px;height:106px;filter:drop-shadow(0 5px 0 rgba(23,105,210,.18))}
-    .choice-btn{width:100%;min-height:56px;margin:6px 0;padding:13px 14px;border:3px solid #2472cf;border-radius:17px;background:#fff;color:var(--navy);font-size:18px;font-weight:800;cursor:pointer;transition:transform .18s,background .18s,box-shadow .18s;box-shadow:0 4px 0 #a9c9ed}
-    .choice-btn:hover{transform:translateY(-3px);background:#eaf5ff;box-shadow:0 7px 0 #a9c9ed}
-    .choice-btn:active{transform:translateY(1px);box-shadow:0 2px 0 #a9c9ed}
-    .tip-box{margin:16px 0 0;padding:14px 16px;border:2px dashed #efc93f;border-radius:17px;background:#fff9dc;color:#755900;font-size:15px;font-weight:700}
-    .empty-hint{margin:28px 0;color:var(--muted);font-size:16px;text-align:center}
-    .lock-notice{margin:14px 0;padding:15px;border:2px solid #f29aa6;border-radius:17px;background:#fff0f2;color:#b12539;font-weight:800;text-align:center}
-    .danger-btn{background:#fff0f2!important;border-color:#d94358!important;color:#b12539!important;box-shadow:0 4px 0 #efb4bd!important}
-    .reward-layer{position:fixed;inset:0;pointer-events:none;display:flex;align-items:center;justify-content:center;z-index:99}
-    .reward-box{padding:26px 32px;border:4px solid var(--navy);border-radius:26px;background:rgba(255,255,255,.98);text-align:center;transform:scale(0) rotate(-5deg);transition:transform .4s ease;box-shadow:0 9px 0 var(--yellow),0 18px 30px rgba(13,67,143,.2)}
-    .reward-box.open{transform:scale(1) rotate(0)}
-    .reward-box h3{color:var(--red);font-size:21px}
-    .star{position:absolute;width:22px;height:22px;background:var(--yellow);clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);animation:starFly 1.1s ease-out forwards}
-    @keyframes starFly{0%{opacity:1;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(var(--tx),var(--ty)) scale(.15)}}
-    @media (max-width:760px){
-      body{padding:10px 8px 24px}
-      .banner{min-height:170px;padding:18px 42px 16px;border-radius:24px}
-      .ultra-svg{width:70px;height:70px}.ultra-float{width:38px;height:38px}
-      .tab-wrap{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
-      .tab-btn{min-height:48px;font-size:13px}
-      .panel{padding:16px;border-radius:22px}
-      .level-box{padding:18px 14px}
-    }
-    @media (max-width:390px){
-      .banner{padding-left:30px;padding-right:30px}.ultra-float{display:none}
-      .tab-btn{font-size:12px}.stat-item{min-width:125px;font-size:13px}
-    }
-    @media (prefers-reduced-motion:reduce){
-      *,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
-    }
+    body{min-height:100vh;padding:18px 12px 32px;color:var(--ink);background:radial-gradient(circle at 12% 8%,rgba(255,216,90,.42) 0 5px,transparent 6px),radial-gradient(circle at 88% 18%,rgba(232,61,79,.18) 0 7px,transparent 8px),linear-gradient(145deg,#f4fbff 0%,#fff8ef 52%,#eef5ff 100%)}
+    body:before,body:after{content:"✦";position:fixed;color:rgba(23,105,210,.13);font-size:88px;pointer-events:none;z-index:-1}body:before{left:2%;top:42%;transform:rotate(-15deg)}body:after{right:3%;bottom:12%;transform:rotate(18deg)}
+    .banner{max-width:1000px;margin:0 auto 16px;min-height:190px;padding:22px 60px 18px;text-align:center;position:relative;overflow:hidden;border:4px solid var(--navy);border-radius:30px;background:linear-gradient(135deg,#1769d2 0%,#2689ee 58%,#3b9ddd 100%);box-shadow:0 10px 0 #0b3d83,var(--shadow);isolation:isolate}
+    .banner:before{content:"";position:absolute;width:240px;height:240px;right:-70px;top:-110px;border:26px solid rgba(255,255,255,.2);border-radius:50%;z-index:-1}.banner:after{content:"✦  ✧  ✦  ✧  ✦";position:absolute;left:0;right:0;bottom:10px;color:rgba(255,255,255,.42);letter-spacing:18px;font-size:13px}
+    .ultra-svg{width:82px;height:82px;filter:drop-shadow(0 5px 0 rgba(13,67,143,.35));animation:bounceIn 1.2s ease-out}.ultra-float{position:absolute;width:48px;height:48px;filter:drop-shadow(0 4px 0 rgba(13,67,143,.25));animation:float 3s ease-in-out infinite alternate}
+    @keyframes bounceIn{0%{transform:scale(.2);opacity:0}60%{transform:scale(1.15)}100%{transform:scale(1);opacity:1}}@keyframes float{0%{transform:translateY(0) rotate(-6deg)}100%{transform:translateY(-10px) rotate(6deg)}}@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}@keyframes starFly{0%{opacity:1;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(var(--tx),var(--ty)) scale(.15)}}
+    h1{position:relative;z-index:1;color:#fff;font-size:clamp(22px,4vw,34px);line-height:1.35;letter-spacing:.04em;text-shadow:0 3px 0 var(--navy);margin:8px 0 3px}.banner-kicker{position:relative;z-index:1;color:#dff3ff;font-size:12px;font-weight:900;letter-spacing:.2em}.banner-subtitle{position:relative;z-index:1;color:#fff;font-size:14px;font-weight:700;opacity:.95}h2{display:flex;align-items:center;gap:8px;color:var(--navy);font-size:clamp(19px,3vw,25px);line-height:1.35}
+    .tab-wrap{max-width:1000px;margin:0 auto 18px;display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:9px}.tab-btn{min-height:52px;padding:10px 8px;border:3px solid var(--navy);border-radius:17px;background:var(--white);color:var(--navy);font-size:14px;font-weight:800;cursor:pointer;transition:transform .2s,background .2s,color .2s,box-shadow .2s;box-shadow:0 5px 0 #b6c9e3}.tab-btn:hover{transform:translateY(-3px);background:#fff4bc}.tab-btn.active{color:#fff;background:var(--red);border-color:#a91e32;box-shadow:0 5px 0 #a91e32;transform:translateY(-2px)}
+    .panel{max-width:1000px;margin:0 auto;padding:22px;border:3px solid #d2e4fa;border-radius:26px;background:rgba(255,255,255,.94);display:none;animation:fadeIn .4s ease;box-shadow:var(--shadow)}.panel.show{display:block}
+    .stat-row{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0}.stat-item{flex:1;min-width:150px;padding:13px 10px;border:2px solid #c7def7;border-radius:17px;background:linear-gradient(135deg,#f4fbff,#e4f2ff);text-align:center;font-size:15px;font-weight:800;color:var(--blue-dark);box-shadow:0 5px 0 #d8e9f9}.checkin-wrap{display:flex;gap:9px;margin:14px 0 18px;justify-content:center}.checkin-dot{width:34px;height:34px;border-radius:50%;border:3px solid #bfd0e5;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#8292aa;background:#f9fcff}.checkin-dot.done{color:#fff;background:var(--red);border-color:#a91e32;box-shadow:0 3px 0 #a91e32}
+    .level-box{position:relative;margin:18px 0;padding:22px 18px;border:3px solid var(--yellow);border-radius:24px;background:linear-gradient(145deg,#fffdf5,#fff5c9);box-shadow:0 7px 0 #efc93f}.level-box:before{content:"✦";position:absolute;right:16px;top:8px;color:#f3b900;font-size:26px}.level-title{margin-bottom:9px;color:var(--blue-dark);font-size:16px;font-weight:800}.q-index{display:inline-block;margin-bottom:9px;padding:5px 11px;border-radius:99px;background:var(--red);color:#fff;font-size:14px;font-weight:800}.question-text{min-height:32px;margin:8px 0 18px;color:var(--navy);font-size:clamp(20px,4vw,27px);font-weight:800;line-height:1.5}.q-icon-block{text-align:center;margin:8px 0 18px;padding:10px}.q-icon-main{width:106px;height:106px;filter:drop-shadow(0 5px 0 rgba(23,105,210,.18))}
+    .choice-btn{width:100%;min-height:56px;margin:6px 0;padding:13px 14px;border:3px solid #2472cf;border-radius:17px;background:#fff;color:var(--navy);font-size:18px;font-weight:800;cursor:pointer;transition:transform .18s,background .18s,box-shadow .18s;box-shadow:0 4px 0 #a9c9ed}.choice-btn:hover{transform:translateY(-3px);background:#eaf5ff;box-shadow:0 7px 0 #a9c9ed}.choice-btn:active{transform:translateY(1px);box-shadow:0 2px 0 #a9c9ed}.tip-box{margin:16px 0 0;padding:14px 16px;border:2px dashed #efc93f;border-radius:17px;background:#fff9dc;color:#755900;font-size:15px;font-weight:700}.empty-hint{margin:28px 0;color:var(--muted);font-size:16px;text-align:center}.lock-notice{margin:14px 0;padding:15px;border:2px solid #f29aa6;border-radius:17px;background:#fff0f2;color:#b12539;font-weight:800;text-align:center}.danger-btn{background:#fff0f2!important;border-color:#d94358!important;color:#b12539!important;box-shadow:0 4px 0 #efb4bd!important}
+    .reward-layer{position:fixed;inset:0;pointer-events:none;display:flex;align-items:center;justify-content:center;z-index:99}.reward-box{padding:26px 32px;border:4px solid var(--navy);border-radius:26px;background:rgba(255,255,255,.98);text-align:center;transform:scale(0) rotate(-5deg);transition:transform .4s ease;box-shadow:0 9px 0 var(--yellow),0 18px 30px rgba(13,67,143,.2)}.reward-box.open{transform:scale(1) rotate(0)}.reward-box h3{color:var(--red);font-size:21px}.star{position:absolute;width:22px;height:22px;background:var(--yellow);clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);animation:starFly 1.1s ease-out forwards}
+    .game-stage{margin-top:18px;padding:18px;border:3px solid #a9c9ed;border-radius:22px;background:#f8fcff;text-align:center}.game-stage svg{max-width:100%;height:auto;touch-action:none}.game-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px}.game-actions .choice-btn{width:auto;min-width:150px}.game-message{min-height:28px;margin-top:12px;color:var(--red);font-size:18px;font-weight:900}.memory-options{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.memory-options .choice-btn{min-width:0;font-size:26px}
+    @media (max-width:900px){.tab-wrap{grid-template-columns:repeat(4,minmax(0,1fr))}}@media (max-width:620px){body{padding:10px 8px 24px}.banner{min-height:170px;padding:18px 42px 16px;border-radius:24px}.ultra-svg{width:70px;height:70px}.ultra-float{width:38px;height:38px}.tab-wrap{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.tab-btn{min-height:48px;font-size:13px}.panel{padding:16px;border-radius:22px}.level-box{padding:18px 14px}.memory-options{grid-template-columns:repeat(2,1fr)}}@media (max-width:390px){.banner{padding-left:30px;padding-right:30px}.ultra-float{display:none}.tab-btn{font-size:12px}.stat-item{min-width:125px;font-size:13px}}@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
   </style>
 </head>
 <body>
-<div class="banner">
-  <svg class="ultra-float" style="top:8px;left:12px;" viewBox="0 0 100 100">
-    <circle cx="50" cy="32" r="22" fill="#f0f0f0"/>
-    <circle cx="42" cy="28" r="4" fill="red"/>
-    <circle cx="58" cy="28" r="4" fill="red"/>
-    <path d="M30 54 Q50 46 70 54 L64 88 L36 88 Z" fill="#ef4444"/>
-    <path d="M38 56 L62 56 L58 82 L42 82 Z" fill="#f8f8f8"/>
-  </svg>
-  <svg class="ultra-svg" viewBox="0 0 100 100">
-    <circle cx="50" cy="32" r="22" fill="#f0f0f0"/>
-    <circle cx="42" cy="28" r="4" fill="red"/>
-    <circle cx="58" cy="28" r="4" fill="red"/>
-    <path d="M30 54 Q50 46 70 54 L64 88 L36 88 Z" fill="#ef4444"/>
-    <path d="M38 56 L62 56 L58 82 L42 82 Z" fill="#f8f8f8"/>
-  </svg>
-  <svg class="ultra-float" style="top:8px;right:12px;animation-delay:0.8s;" viewBox="0 0 100 100">
-    <circle cx="50" cy="32" r="22" fill="#f0f0f0"/>
-    <circle cx="42" cy="28" r="4" fill="red"/>
-    <circle cx="58" cy="28" r="4" fill="red"/>
-    <path d="M30 54 Q50 46 70 54 L64 88 L36 88 Z" fill="#ef4444"/>
-    <path d="M38 56 L62 56 L58 82 L42 82 Z" fill="#f8f8f8"/>
-  </svg>
-  <p class="banner-kicker">ULTRA STUDY MISSION · K3</p>
-  <h1>9月高班評估輕鬆溫習小樂園<br/>奧特曼陪我溫書✨</h1>
-  <p class="banner-subtitle">每日完成 5 題，收集你的學習能量！</p>
-</div>
-
-<div class="tab-wrap">
-  <button class="tab-btn active" data-target="tab-chinese">中文(30題)</button>
-  <button class="tab-btn" data-target="tab-math">數學(30題)</button>
-  <button class="tab-btn" data-target="tab-eng-vocab">Eng‑Vocab(30題)</button>
-  <button class="tab-btn" data-target="tab-eng-sent">Eng‑句型(30題)</button>
-  <button class="tab-btn" data-target="tab-mandarin">普通話(30題)</button>
-  <button class="tab-btn" data-target="tab-all-mistake">綜合錯題練習</button>
-</div>
-
-<!--中文30題-->
-<div class="panel show" id="tab-chinese">
-  <h2>📖 中文溫習｜每日5題・6天打卡</h2>
-  <div class="stat-row">
-    <div class="stat-item">今日完成：<span id="chinese-today">0</span>/5</div>
-    <div class="stat-item">當前第 <span id="chinese-day">1</span> /6 天</div>
+  <div class="banner">
+    <svg class="ultra-float" style="top:8px;left:12px" viewBox="0 0 100 100"><circle cx="50" cy="32" r="22" fill="#f0f0f0"/><circle cx="42" cy="28" r="4" fill="red"/><circle cx="58" cy="28" r="4" fill="red"/><path d="M30 54 Q50 46 70 54 L64 88 L36 88 Z" fill="#ef4444"/><path d="M38 56 L62 56 L58 82 L42 82 Z" fill="#f8f8f8"/></svg>
+    <svg class="ultra-svg" viewBox="0 0 100 100"><circle cx="50" cy="32" r="22" fill="#f0f0f0"/><circle cx="42" cy="28" r="4" fill="red"/><circle cx="58" cy="28" r="4" fill="red"/><path d="M30 54 Q50 46 70 54 L64 88 L36 88 Z" fill="#ef4444"/><path d="M38 56 L62 56 L58 82 L42 82 Z" fill="#f8f8f8"/></svg>
+    <svg class="ultra-float" style="top:8px;right:12px;animation-delay:.8s" viewBox="0 0 100 100"><circle cx="50" cy="32" r="22" fill="#f0f0f0"/><circle cx="42" cy="28" r="4" fill="red"/><circle cx="58" cy="28" r="4" fill="red"/><path d="M30 54 Q50 46 70 54 L64 88 L36 88 Z" fill="#ef4444"/><path d="M38 56 L62 56 L58 82 L42 82 Z" fill="#f8f8f8"/></svg>
+    <p class="banner-kicker">ULTRA STUDY MISSION · K3</p><h1>高班評估輕鬆溫習小樂園<br>奧特曼陪我溫書✨</h1><p class="banner-subtitle">每日完成 5 題，收集你的學習能量！</p>
   </div>
-  <div class="checkin-wrap" id="chinese-checkin"></div>
-  <div id="chinese-lock" class="lock-notice" style="display:none;">🔒今天挑戰已完成！下一次挑戰請明天開始</div>
-  <div class="level-box">
-    <div class="q-index" id="chinese-qidx"></div>
-    <div class="question-text" id="chinese-q"></div>
-    <div id="chinese-opt"></div>
+
+  <div class="tab-wrap">
+    <button class="tab-btn active" data-target="tab-chinese">中文(30題)</button><button class="tab-btn" data-target="tab-math">數學(30題)</button><button class="tab-btn" data-target="tab-eng-vocab">Eng‑Vocab(30題)</button><button class="tab-btn" data-target="tab-eng-sent">Eng‑句型(30題)</button><button class="tab-btn" data-target="tab-mandarin">普通話(30題)</button><button class="tab-btn" data-target="tab-ultraman">奧特曼題(30題)</button><button class="tab-btn" data-target="tab-all-mistake">綜合錯題練習</button><button class="tab-btn" data-target="tab-game">🎮專注力小遊戲</button>
   </div>
-  <div class="tip-box">💡答對自動下一題；答錯可以再選答案｜超人為你打氣！</div>
-</div>
+  <main id="subject-panels"></main>
 
-<!--數學30題-->
-<div class="panel" id="tab-math">
-  <h2>🔢 數學溫習｜每日5題・6天打卡</h2>
-  <div class="stat-row">
-    <div class="stat-item">今日完成：<span id="math-today">0</span>/5</div>
-    <div class="stat-item">當前第 <span id="math-day">1</span> /6 天</div>
-  </div>
-  <div class="checkin-wrap" id="math-checkin"></div>
-  <div id="math-lock" class="lock-notice" style="display:none;">🔒今天挑戰已完成！下一次挑戰請明天開始</div>
-  <div class="level-box">
-    <div class="q-index" id="math-qidx"></div>
-    <div class="question-text" id="math-q"></div>
-    <div id="math-opt"></div>
-  </div>
-  <div class="tip-box">💡答對自動下一題；答錯可以再選答案｜超人為你打氣！</div>
-</div>
+  <section class="panel" id="tab-all-mistake">
+    <h2>🔧 綜合錯題練習（全部科目）</h2><div class="stat-row"><div class="stat-item">錯題總數：<span id="allmistake-count">0</span></div></div>
+    <div id="allmistake-empty" class="empty-hint">暫時沒有錯題，多做練習就會出現✨奧特曼等你挑戰</div>
+    <div class="level-box" id="allmistake-wrap" style="display:none"><div class="level-title">科目：<span id="allmistake-subject"></span></div><div class="q-index" id="allmistake-qidx"></div><div class="q-icon-block" id="allmistake-icon"></div><div class="question-text" id="allmistake-q"></div><div id="allmistake-opt"></div></div>
+    <button class="choice-btn" id="allmistake-clear" style="margin-top:10px;background:#ffddcc">清空全部錯題本</button><button class="choice-btn danger-btn" id="reset-all-progress" style="margin-top:8px">⚠️重置全部練習進度</button>
+  </section>
 
-<!--Eng Vocab30題-->
-<div class="panel" id="tab-eng-vocab">
-  <h2>🔤 English Vocab｜看圖選英文｜每日5題・6天打卡</h2>
-  <div class="stat-row">
-    <div class="stat-item">今日完成：<span id="vocab-today">0</span>/5</div>
-    <div class="stat-item">當前第 <span id="vocab-day">1</span> /6 天</div>
-  </div>
-  <div class="checkin-wrap" id="vocab-checkin"></div>
-  <div id="vocab-lock" class="lock-notice" style="display:none;">🔒今天挑戰已完成！下一次挑戰請明天開始</div>
-  <div class="level-box">
-    <div class="q-index" id="vocab-qidx"></div>
-    <div class="q-icon-block" id="vocab-qicon"></div>
-    <div id="vocab-opt"></div>
-  </div>
-  <div class="tip-box">💡看圖選英文，答對自動下一題｜超人為你打氣！</div>
-</div>
+  <section class="panel" id="tab-game">
+    <h2>🎮 專注力小遊戲</h2><div class="stat-row"><div class="stat-item">今日遊戲：第 <span id="game-day">1</span> /6 天</div><div class="stat-item" id="game-title">迷宮遊戲</div></div>
+    <div id="game-locked" class="lock-notice">完成今日錯題練習，即可解鎖本日小遊戲✨</div><div id="game-content" style="display:none"></div>
+  </section>
 
-<!--Eng句型30題-->
-<div class="panel" id="tab-eng-sent">
-  <h2>🔤 English句型｜每日5題・6天打卡</h2>
-  <div class="stat-row">
-    <div class="stat-item">今日完成：<span id="engsent-today">0</span>/5</div>
-    <div class="stat-item">當前第 <span id="engsent-day">1</span> /6 天</div>
-  </div>
-  <div class="checkin-wrap" id="engsent-checkin"></div>
-  <div id="engsent-lock" class="lock-notice" style="display:none;">🔒今天挑戰已完成！下一次挑戰請明天開始</div>
-  <div class="level-box">
-    <div class="q-index" id="engsent-qidx"></div>
-    <div class="question-text" id="engsent-q"></div>
-    <div id="engsent-opt"></div>
-  </div>
-  <div class="tip-box">💡答對自動下一題；答錯可以再選答案｜超人為你打氣！</div>
-</div>
+  <div class="reward-layer"><div class="reward-box"><svg width="84" height="84" viewBox="0 0 100 100"><circle cx="50" cy="32" r="22" fill="#f0f0f0"/><circle cx="42" cy="28" r="4" fill="red"/><circle cx="58" cy="28" r="4" fill="red"/><path d="M30 54 Q50 46 70 54 L64 88 L36 88 Z" fill="#ef4444"/><path d="M38 56 L62 56 L58 82 L42 82 Z" fill="#f8f8f8"/></svg><h3>太棒啦✨奧特曼為你加油！</h3></div></div>
 
-<!--普通話30題-->
-<div class="panel" id="tab-mandarin">
-  <h2>🎤 普通話溫習｜每日5題・6天打卡</h2>
-  <div class="stat-row">
-    <div class="stat-item">今日完成：<span id="mand-today">0</span>/5</div>
-    <div class="stat-item">當前第 <span id="mand-day">1</span> /6 天</div>
-  </div>
-  <div class="checkin-wrap" id="mand-checkin"></div>
-  <div id="mand-lock" class="lock-notice" style="display:none;">🔒今天挑戰已完成！下一次挑戰請明天開始</div>
-  <div class="level-box">
-    <div class="q-index" id="mand-qidx"></div>
-    <div class="question-text" id="mand-q"></div>
-    <div id="mand-opt"></div>
-  </div>
-  <div class="tip-box">💡答對自動下一題；答錯可以再選答案｜超人為你打氣！</div>
-</div>
+  <script>
+    const PER_DAY=5,TOTAL_DAY=6,STORAGE_KEY="kindergarten_study_data";
+    const SUBJECTS={chinese:{label:"中文",title:"📖 中文溫習",dataKey:"chinese"},math:{label:"數學",title:"🔢 數學溫習",dataKey:"math"},vocab:{label:"Eng‑Vocab",title:"🔤 English Vocab｜看圖選英文",dataKey:"vocab"},engsent:{label:"Eng‑句型",title:"🔤 English句型",dataKey:"engsent"},mandarin:{label:"普通話",title:"🎤 普通話溫習",dataKey:"mandarin"},ultraman:{label:"奧特曼題",title:"⚡ 奧特曼題",dataKey:"ultraman"}};
+    const GAME_NAMES=["迷宮遊戲","找不同遊戲","視覺記憶遊戲","數字記憶遊戲","圖形規律遊戲","反應訓練遊戲"];
+    let quizData={},quizDataReady=false,mistakeCursor=0,mistakeLocalList=[],gameTimer;
+    function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+    function getTodayStr(){const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`}
+    function subjectState(){return {pool:shuffle([...Array(30).keys()]),day:1,todayDone:0,pos:0}}
+    function getDefaultData(){return {version:null,lastDate:getTodayStr(),dailyPracticeCount:0,game:{date:getTodayStr(),cycleDay:1,unlocked:false,completed:false},globalMistake:[],...Object.fromEntries(Object.keys(SUBJECTS).map(k=>[k,subjectState()]))}}
+    function loadStorage(){let data;try{data=JSON.parse(localStorage.getItem(STORAGE_KEY)||"null")}catch(e){data=null}if(!data)data=getDefaultData();Object.keys(SUBJECTS).forEach(k=>{if(!data[k])data[k]=subjectState()});if(!Array.isArray(data.globalMistake))data.globalMistake=[];if(!data.game)data.game={date:getTodayStr(),cycleDay:1,unlocked:false,completed:false};if(data.lastDate!==getTodayStr()){data.lastDate=getTodayStr();data.dailyPracticeCount=0;Object.keys(SUBJECTS).forEach(k=>data[k].todayDone=0);data.game={date:getTodayStr(),cycleDay:(Number(data.game.cycleDay||1)%6)+1,unlocked:false,completed:false}}return data}
+    let appData=loadStorage();
+    function saveStorage(){localStorage.setItem(STORAGE_KEY,JSON.stringify(appData))}
+    function renderCheckin(id,day){const el=document.getElementById(id);el.innerHTML="";for(let i=1;i<=TOTAL_DAY;i++){const dot=document.createElement("div");dot.className="checkin-dot"+(i<=Math.min(day,TOTAL_DAY)?" done":"");dot.textContent=i;el.appendChild(dot)}}
+    function showReward(){const box=document.querySelector(".reward-box");box.classList.add("open");for(let i=0;i<12;i++){const s=document.createElement("div");s.className="star";s.style.setProperty("--tx",(Math.random()*220-110)+"px");s.style.setProperty("--ty",(Math.random()*-150-35)+"px");s.style.left="50%";s.style.top="50%";document.querySelector(".reward-layer").appendChild(s);setTimeout(()=>s.remove(),1100)}setTimeout(()=>box.classList.remove("open"),1200)}
+    function speakPraise(){if("speechSynthesis" in window){window.speechSynthesis.cancel();const utterance=new SpeechSynthesisUtterance("相信光，奧特曼為你加油");utterance.lang="zh-CN";utterance.rate=.9;window.speechSynthesis.speak(utterance)}}
+    function markPractice(){appData.dailyPracticeCount=(appData.dailyPracticeCount||0)+1;saveStorage();updateGameUnlock()}
+    function subjectPanel(key){const s=SUBJECTS[key];return `<section class="panel${key==="chinese"?" show":""}" id="tab-${key==="vocab"?"eng-vocab":key==="engsent"?"eng-sent":key==="mandarin"?"mandarin":key}"><h2>${s.title}｜每日5題・6天打卡</h2><div class="stat-row"><div class="stat-item">今日完成：<span id="${key}-today">0</span>/5</div><div class="stat-item">當前第 <span id="${key}-day">1</span> /6 天</div></div><div class="checkin-wrap" id="${key}-checkin"></div><div id="${key}-lock" class="lock-notice" style="display:none">🔒今天挑戰已完成！下一次挑戰請明天開始</div><div class="level-box"><div class="q-index" id="${key}-qidx"></div><div class="q-icon-block" id="${key}-icon"></div><div class="question-text" id="${key}-q"></div><div id="${key}-opt"></div></div><div class="tip-box">💡答對自動下一題；答錯可以再選答案｜奧特曼為你打氣！</div></section>`}
+    document.getElementById("subject-panels").innerHTML=Object.keys(SUBJECTS).map(subjectPanel).join("");
+    function addMistake(type,index){if(!appData.globalMistake.some(x=>x.type===type&&x.index===index)){appData.globalMistake.push({type,index});saveStorage();updateGameUnlock()}}
+    function updateSubjectStats(key,s){document.getElementById(`${key}-day`).textContent=Math.min(s.day,TOTAL_DAY);document.getElementById(`${key}-today`).textContent=s.todayDone;renderCheckin(`${key}-checkin`,s.day-1)}
+    function renderSubject(key){if(!quizDataReady)return;const s=appData[key],items=quizData[SUBJECTS[key].dataKey],lock=document.getElementById(`${key}-lock`);updateSubjectStats(key,s);if(s.todayDone>=PER_DAY){lock.style.display="block";document.getElementById(`${key}-qidx`).textContent="";document.getElementById(`${key}-q`).textContent="";document.getElementById(`${key}-icon`).innerHTML="";document.getElementById(`${key}-opt`).innerHTML="";return}lock.style.display="none";const idx=s.pool[s.pos%30],q=items[idx],qEl=document.getElementById(`${key}-q`),iconEl=document.getElementById(`${key}-icon`),optsEl=document.getElementById(`${key}-opt`);document.getElementById(`${key}-qidx`).textContent=`題目 ${(s.pos%30)+1} /30`;iconEl.innerHTML=q.iconSvg||"";qEl.textContent=q.q||"";optsEl.innerHTML="";const options=q.opts||[q.answer,...q.distract];shuffle(options).forEach(txt=>{const btn=document.createElement("button");btn.className="choice-btn";btn.textContent=txt;btn.onclick=()=>{if(txt===(q.opts?q.opts[q.correct]:q.answer)){showReward();s.todayDone++;s.pos++;appData.dailyPracticeCount=(appData.dailyPracticeCount||0)+1;if(s.todayDone>=PER_DAY){s.todayDone=0;s.day=Math.min(s.day+1,TOTAL_DAY+1)}s.dailyPracticeCount=appData.dailyPracticeCount;saveStorage();speakPraise();updateGameUnlock();setTimeout(()=>renderSubject(key),400)}else{alert("再試一試吧！");addMistake(key,idx)}};optsEl.appendChild(btn)});updateGameUnlock()}
+    function renderAllSubjects(){Object.keys(SUBJECTS).forEach(renderSubject)}
+    function mistakeQuestion(item){const q=quizData[SUBJECTS[item.type].dataKey][item.index];return {q,subject:SUBJECTS[item.type].label,options:q.opts||[q.answer,...q.distract],correct:q.opts?q.opts[q.correct]:q.answer}}
+    function renderAllMistake(){mistakeLocalList=[...appData.globalMistake];document.getElementById("allmistake-count").textContent=mistakeLocalList.length;if(!mistakeLocalList.length){document.getElementById("allmistake-empty").style.display="block";document.getElementById("allmistake-wrap").style.display="none";updateGameUnlock();return}document.getElementById("allmistake-empty").style.display="none";document.getElementById("allmistake-wrap").style.display="block";if(mistakeCursor>=mistakeLocalList.length){document.getElementById("allmistake-q").textContent="🎉全部錯題做完！奧特曼為你鼓掌";document.getElementById("allmistake-opt").innerHTML="";document.getElementById("allmistake-qidx").textContent="";appData.globalMistake=[];mistakeCursor=0;saveStorage();updateGameUnlock();return}const item=mistakeLocalList[mistakeCursor],data=mistakeQuestion(item);document.getElementById("allmistake-subject").textContent=data.subject;document.getElementById("allmistake-qidx").textContent=`錯題 ${mistakeCursor+1}`;document.getElementById("allmistake-q").textContent=data.q.q||"";document.getElementById("allmistake-icon").innerHTML=data.q.iconSvg||"";const wrap=document.getElementById("allmistake-opt");wrap.innerHTML="";shuffle(data.options).forEach(txt=>{const b=document.createElement("button");b.className="choice-btn";b.textContent=txt;b.onclick=()=>{if(txt===data.correct){showReward();mistakeCursor++;setTimeout(renderAllMistake,400)}else alert("再試一試吧！")};wrap.appendChild(b)})}
+    function updateGameUnlock(){const unlocked=appData.dailyPracticeCount>0&&appData.globalMistake.length===0;appData.game.unlocked=unlocked;saveStorage();document.getElementById("game-locked").style.display=unlocked?"none":"block";document.getElementById("game-content").style.display=unlocked?"block":"none";document.getElementById("game-day").textContent=appData.game.cycleDay;document.getElementById("game-title").textContent=GAME_NAMES[appData.game.cycleDay-1];if(unlocked&&document.getElementById("tab-game").classList.contains("show"))renderGame()}
 
-<!--綜合錯題練習（五大模塊錯題匯總）-->
-<div class="panel" id="tab-all-mistake">
-  <h2>🔧 綜合錯題練習（全部科目）</h2>
-  <div class="stat-row">
-    <div class="stat-item">錯題總數：<span id="allmistake-count">0</span></div>
-  </div>
-  <div id="allmistake-empty" class="empty-hint">暫時沒有錯題，多做練習就會出現✨奧特曼等你挑戰</div>
-  <div class="level-box" id="allmistake-wrap" style="display:none;">
-    <div class="level-title">科目：<span id="allmistake-subject"></span></div>
-    <div class="q-index" id="allmistake-qidx"></div>
-    <div class="q-icon-block" id="allmistake-icon"></div>
-    <div class="question-text" id="allmistake-q"></div>
-    <div id="allmistake-opt"></div>
-  </div>
-  <button class="choice-btn" id="allmistake-clear" style="margin-top:10px;background:#ffddcc;">清空全部錯題本</button>
-  <button class="choice-btn danger-btn" id="reset-all-progress" style="margin-top:8px;">⚠️重置全部練習進度</button>
-</div>
+    function finishGame(message){clearTimeout(gameTimer);appData.game.completed=true;saveStorage();document.getElementById("game-message").textContent=message||"完成任務！奧特曼為你加油✨"}
+    function gameShell(content){return `<div class="game-stage">${content}<div class="game-message" id="game-message"></div></div>`}
+    function renderGame(){if(!appData.game.unlocked)return;const day=appData.game.cycleDay,root=document.getElementById("game-content");if(day===1)mazeGame(root);if(day===2)findDifferentGame(root);if(day===3)visualMemoryGame(root);if(day===4)digitMemoryGame(root);if(day===5)patternGame(root);if(day===6)reactionGame(root)}
+    function mazeGame(root){root.innerHTML=gameShell(`<svg id="maze-svg" viewBox="0 0 320 220" aria-label="迷宮"><rect width="320" height="220" rx="18" fill="#dff3ff"/><path d="M30 35H290V185H30V135H240V85H80V185M30 85H80V35M160 185V135M240 85V35" fill="none" stroke="#1769d2" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/><circle id="maze-ball" cx="48" cy="110" r="10" fill="#e83d4f"/><text x="260" y="207" fill="#0d438f" font-size="14">終點⭐</text></svg><p>拖動紅色小球，沿藍色通道走到終點吧！</p>`);const ball=document.getElementById("maze-ball");let moves=0;ball.addEventListener("pointerdown",e=>{ball.setPointerCapture(e.pointerId);moves=0});ball.addEventListener("pointermove",e=>{if(e.buttons){const p=document.getElementById("maze-svg").createSVGPoint();p.x=e.clientX;p.y=e.clientY;const c=document.getElementById("maze-svg").getScreenCTM();const local=p.matrixTransform(c.inverse());ball.setAttribute("cx",Math.max(32,Math.min(288,local.x)));ball.setAttribute("cy",Math.max(32,Math.min(188,local.y)));moves++;if(Number(ball.getAttribute("cx"))>270&&Number(ball.getAttribute("cy"))>165&&moves>10)finishGame("迷宮成功！奧特曼為你拍手👏")}})}
+    function findDifferentGame(root){root.innerHTML=gameShell(`<p>找出右邊圖案的<span style="color:#e83d4f"> 3 個不同點</span>！</p><svg id="different-svg" viewBox="0 0 360 190"><rect x="8" y="8" width="160" height="170" rx="16" fill="#fff4bc" stroke="#1769d2" stroke-width="4"/><rect x="192" y="8" width="160" height="170" rx="16" fill="#fff4bc" stroke="#1769d2" stroke-width="4"/><circle cx="88" cy="70" r="28" fill="#70c8ff"/><circle cx="272" cy="70" r="28" fill="#70c8ff"/><circle cx="58" cy="125" r="16" fill="#e83d4f"/><circle cx="242" cy="125" r="16" fill="#e83d4f"/><circle cx="128" cy="130" r="12" fill="#ffd85a"/><rect x="312" y="118" width="18" height="24" rx="5" fill="#fff"/></svg>`);const svg=document.getElementById("different-svg"),spots=[{x:312,y:130},{x:272,y:70},{x:242,y:125}],hit=new Set;spots.forEach((p,i)=>{const c=document.createElementNS("http://www.w3.org/2000/svg","circle");c.setAttribute("cx",p.x);c.setAttribute("cy",p.y);c.setAttribute("r",24);c.setAttribute("fill","transparent");c.style.cursor="pointer";c.addEventListener("click",()=>{if(hit.has(i))return;hit.add(i);c.setAttribute("fill","rgba(232,61,79,.35)");if(hit.size===3)finishGame("三個不同點都找到啦！眼睛真利害✨")});svg.appendChild(c)})}
+    function visualMemoryGame(root){const icons=shuffle(["⭐","🔵","🍎","🌈","🚀","❤️"]).slice(0,4);root.innerHTML=gameShell(`<h3 id="memory-prompt">記住這些圖案！</h3><div id="memory-show" class="memory-options">${icons.map(x=>`<button class="choice-btn">${x}</button>`).join("")}</div><div id="memory-choices" class="memory-options" style="display:none"></div>`);setTimeout(()=>{document.getElementById("memory-show").style.display="none";const choices=shuffle([...icons,"🐱","🌙"]);document.getElementById("memory-prompt").textContent="哪些圖案剛才出現過？";const box=document.getElementById("memory-choices");box.style.display="grid";let hit=0;choices.forEach(icon=>{const b=document.createElement("button");b.className="choice-btn";b.textContent=icon;b.onclick=()=>{if(icons.includes(icon)){b.disabled=true;b.style.background="#baf0cc";hit++;if(hit===icons.length)finishGame("記憶力滿分！奧特曼好欣賞你✨")}else{b.style.background="#ffd0d0"}};box.appendChild(b)})},1800)}
+    function digitMemoryGame(root){const digits=Array.from({length:4},()=>Math.floor(Math.random()*9)+1);root.innerHTML=gameShell(`<h3 id="digit-prompt">請記住數字：<strong>${digits.join("　")}</strong></h3><div id="digit-options" class="memory-options" style="display:none"></div>`);setTimeout(()=>{document.getElementById("digit-prompt").textContent="按順序點擊剛才的數字";const box=document.getElementById("digit-options");box.style.display="grid";let pos=0;shuffle([...new Set([...digits,...[1,2,3,4,5,6,7,8,9]])]).slice(0,9).forEach(n=>{const b=document.createElement("button");b.className="choice-btn";b.textContent=n;b.onclick=()=>{if(n===digits[pos]){b.disabled=true;pos++;if(pos===digits.length)finishGame("數字記得很準！繼續發光吧✨")}else{pos=0;document.querySelectorAll("#digit-options button").forEach(x=>x.disabled=false);document.getElementById("game-message").textContent="再想一次，按照順序點擊喔！"}};box.appendChild(b)})},1800)}
+    function patternGame(root){const shapes=["●","▲","■","●","▲"],answer="■";root.innerHTML=gameShell(`<h3>看規律：${shapes.join("　")}　？</h3><div class="memory-options" id="pattern-options"></div>`);["●","▲","■","★"].forEach(x=>{const b=document.createElement("button");b.className="choice-btn";b.textContent=x;b.onclick=()=>x===answer?finishGame("答對啦！你是規律小高手✨"):document.getElementById("game-message").textContent="再看一次前面的順序喔！";document.getElementById("pattern-options").appendChild(b)})}
+    function reactionGame(root){root.innerHTML=gameShell(`<p>看到星星就快點擊！一共 5 顆⭐</p><svg id="reaction-svg" viewBox="0 0 320 180"><rect width="320" height="180" rx="18" fill="#102a56"/><text id="reaction-star" x="160" y="95" text-anchor="middle" font-size="44" style="cursor:pointer">⭐</text></svg>`);let score=0;const star=document.getElementById("reaction-star");const move=()=>{star.setAttribute("x",30+Math.random()*260);star.setAttribute("y",50+Math.random()*100)};star.onclick=()=>{score++;if(score>=5)finishGame("反應超快！奧特曼為你歡呼🎉");else{document.getElementById("game-message").textContent=`已接到 ${score}/5 顆星！`;move()}};move()}
 
-<!--獎勵彈窗-->
-<div class="reward-layer">
-  <div class="reward-box">
-    <svg width="84" height="84" viewBox="0 0 100 100">
-      <circle cx="50" cy="32" r="22" fill="#f0f0f0"/>
-      <circle cx="42" cy="28" r="4" fill="red"/>
-      <circle cx="58" cy="28" r="4" fill="red"/>
-      <path d="M30 54 Q50 46 70 54 L64 88 L36 88 Z" fill="#ef4444"/>
-      <path d="M38 56 L62 56 L58 82 L42 82 Z" fill="#f8f8f8"/>
-    </svg>
-    <h3>太棒啦✨奧特曼為你加油！</h3>
-  </div>
-</div>
-
-<script>
-//=====通用配置=====
-const PER_DAY=5;
-const TOTAL_DAY=6;
-const STORAGE_KEY = "kindergarten_study_data";
-
-//工具函數
-function shuffle(arr){
-  let a=[...arr];
-  for(let i=a.length-1;i>0;i--){
-    const j=Math.floor(Math.random()*(i+1));
-    [a[i],a[j]]=[a[j],a[i]];
-  }
-  return a;
-}
-function spawnStar(){
-  const layer = document.querySelector('.reward-layer');
-  for(let i=0;i<12;i++){
-    const s = document.createElement('div');
-    s.className="star";
-    s.style.setProperty('--tx', (Math.random()*220-110)+'px');
-    s.style.setProperty('--ty', (Math.random()*-150 -35)+'px');
-    s.style.left="50%";
-    s.style.top="50%";
-    layer.appendChild(s);
-    setTimeout(()=>s.remove(),1100);
-  }
-}
-function showReward(){
-  const box = document.querySelector('.reward-box');
-  box.classList.add('open');
-  spawnStar();
-  setTimeout(()=>{ box.classList.remove('open'); },1200)
-}
-
-//取得今日日期字串 YYYY‑MM‑DD
-function getTodayStr(){
-  const d=new Date();
-  const y=d.getFullYear();
-  const m=String(d.getMonth()+1).padStart(2,'0');
-  const day=String(d.getDate()).padStart(2,'0');
-  return `${y}-${m}-${day}`;
-}
-
-//默認初始數據
-function getDefaultData(){
-  return {
-    lastDate:getTodayStr(),
-    chinese:{pool:shuffle([...Array(30).keys()]),day:1,todayDone:0,pos:0},
-    math:{pool:shuffle([...Array(30).keys()]),day:1,todayDone:0,pos:0},
-    vocab:{pool:shuffle([...Array(30).keys()]),day:1,todayDone:0,pos:0},
-    engsent:{pool:shuffle([...Array(30).keys()]),day:1,todayDone:0,pos:0},
-    mandarin:{pool:shuffle([...Array(30).keys()]),day:1,todayDone:0,pos:0},
-    globalMistake:[]
-  }
-}
-
-//讀取本地存儲
-function loadStorage(){
-  const raw = localStorage.getItem(STORAGE_KEY);
-  if(!raw) return getDefaultData();
-  try{
-    const obj=JSON.parse(raw);
-    //跨天判斷：如果今天不等於lastDate，把所有todayDone歸0
-    if(obj.lastDate !== getTodayStr()){
-      obj.lastDate = getTodayStr();
-      obj.chinese.todayDone=0;
-      obj.math.todayDone=0;
-      obj.vocab.todayDone=0;
-      obj.engsent.todayDone=0;
-      obj.mandarin.todayDone=0;
-    }
-    return obj;
-  }catch(e){
-    return getDefaultData();
-  }
-}
-
-//寫入本地存儲
-function saveStorage(appData){
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(appData));
-}
-
-//重置全部進度
-function resetAllData(){
-  if(!confirm("確定要重置全部練習進度？所有打卡、錯題記錄將全部清除，無法復原！")) return;
-  localStorage.removeItem(STORAGE_KEY);
-  location.reload();
-}
-
-let appData = loadStorage();
-
-//標籤切換
-const tabs = document.querySelectorAll('.tab-btn');
-const panels = document.querySelectorAll('.panel');
-tabs.forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    const targetId = btn.dataset.target;
-    tabs.forEach(b=>b.classList.remove('active'));
-    panels.forEach(p=>p.classList.remove('show'));
-    btn.classList.add('active');
-    document.getElementById(targetId).classList.add('show');
-    if(targetId==="tab-all-mistake") renderAllMistake();
-  })
-})
-
-//打卡圓點渲染
-function renderCheckin(elId, doneDay){
-  const wrap=document.getElementById(elId);
-  wrap.innerHTML="";
-  for(let i=1;i<=TOTAL_DAY;i++){
-    const d=document.createElement('div');
-    d.className="checkin-dot"+(i<=doneDay?" done":"");
-    d.innerText=i;
-    wrap.appendChild(d);
-  }
-}
-
-//=====外部題庫=====
-let chineseQuiz30 = [];
-let mathQuiz30 = [];
-let vocabAll30 = [];
-let engSentQuiz30 = [];
-let mandQuiz30 = [];
-let quizDataReady = false;
-
-function showQuizDataError(message){
-  document.querySelectorAll(".question-text").forEach(el=>{
-    el.innerText = message;
-  });
-  document.querySelectorAll(".q-icon-block").forEach(el=>{
-    el.innerHTML = "";
-  });
-}
-
-async function loadQuizData(){
-  try{
-    const response = await fetch("quiz-data.json", {cache:"no-store"});
-    if(!response.ok) throw new Error(`HTTP ${response.status}`);
-    const data = await response.json();
-    const subjects = ["chinese","math","vocab","engsent","mandarin"];
-    if(subjects.some(subject=>!Array.isArray(data[subject]) || data[subject].length !== 30)){
-      throw new Error("題庫格式錯誤");
-    }
-    chineseQuiz30 = data.chinese;
-    mathQuiz30 = data.math;
-    vocabAll30 = data.vocab;
-    engSentQuiz30 = data.engsent;
-    mandQuiz30 = data.mandarin;
-    quizDataReady = true;
-    renderChinese();
-    renderMath();
-    renderVocab();
-    renderEngSent();
-    renderMand();
-    renderAllMistake();
-  }catch(error){
-    console.error("題庫載入失敗：", error);
-    showQuizDataError("題庫載入失敗，請確認 quiz-data.json 存在並以網站伺服器開啟頁面。");
-  }
-}
-
-function renderChinese(){
-  if(!quizDataReady) return;
-  const s = appData.chinese;
-  if(s.todayDone >= PER_DAY){
-    document.getElementById("chinese-lock").style.display="block";
-    document.getElementById("chinese-qidx").innerText="";
-    document.getElementById("chinese-q").innerText="";
-    document.getElementById("chinese-opt").innerHTML="";
-    renderCheckin("chinese-checkin", s.day-1);
-    document.getElementById("chinese-day").innerText = s.day;
-    document.getElementById("chinese-today").innerText = s.todayDone;
-    return;
-  }
-  document.getElementById("chinese-lock").style.display="none";
-  const idx = s.pool[s.pos];
-  const q = chineseQuiz30[idx];
-  document.getElementById("chinese-qidx").innerText = `題目 ${s.pos+1} /30`;
-  document.getElementById("chinese-q").innerText = q.q;
-  const optWrap = document.getElementById("chinese-opt");
-  optWrap.innerHTML="";
-  const opts=shuffle(q.opts);
-  opts.forEach(txt=>{
-    const b=document.createElement("button");
-    b.className="choice-btn";
-    b.innerText=txt;
-    b.onclick=()=>{
-      if(txt === q.opts[q.correct]){
-        showReward();
-        s.todayDone++;
-        s.pos++;
-        if(s.todayDone>=PER_DAY){
-          s.day++;
-          s.todayDone=0;
-        }
-        saveStorage(appData);
-        setTimeout(renderChinese,400);
-      }else{
-        alert("再試一試吧！");
-        const exist = appData.globalMistake.some(x=>x.type==="chinese"&&x.index===idx);
-        if(!exist){
-          appData.globalMistake.push({type:"chinese",index:idx});
-          saveStorage(appData);
-        }
-      }
-      document.getElementById("chinese-day").innerText = s.day;
-      document.getElementById("chinese-today").innerText = s.todayDone;
-      renderCheckin("chinese-checkin", s.day-1);
-    }
-    optWrap.appendChild(b);
-  })
-  renderCheckin("chinese-checkin", s.day-1);
-  document.getElementById("chinese-day").innerText = s.day;
-  document.getElementById("chinese-today").innerText = s.todayDone;
-}
-
-// --------數學--------
-function renderMath(){
-  if(!quizDataReady) return;
-  const s = appData.math;
-  if(s.todayDone >= PER_DAY){
-    document.getElementById("math-lock").style.display="block";
-    document.getElementById("math-qidx").innerText="";
-    document.getElementById("math-q").innerText="";
-    document.getElementById("math-opt").innerHTML="";
-    renderCheckin("math-checkin", s.day-1);
-    document.getElementById("math-day").innerText = s.day;
-    document.getElementById("math-today").innerText = s.todayDone;
-    return;
-  }
-  document.getElementById("math-lock").style.display="none";
-  const idx = s.pool[s.pos];
-  const q = mathQuiz30[idx];
-  document.getElementById("math-qidx").innerText = `題目 ${s.pos+1} /30`;
-  document.getElementById("math-q").innerText = q.q;
-  const optWrap = document.getElementById("math-opt");
-  optWrap.innerHTML="";
-  const opts=shuffle(q.opts);
-  opts.forEach(txt=>{
-    const b=document.createElement("button");
-    b.className="choice-btn";
-    b.innerText=txt;
-    b.onclick=()=>{
-      if(txt === q.opts[q.correct]){
-        showReward();
-        s.todayDone++;
-        s.pos++;
-        if(s.todayDone>=PER_DAY){
-          s.day++;
-          s.todayDone=0;
-        }
-        saveStorage(appData);
-        setTimeout(renderMath,400);
-      }else{
-        alert("再試一試吧！");
-        const exist = appData.globalMistake.some(x=>x.type==="math"&&x.index===idx);
-        if(!exist){
-          appData.globalMistake.push({type:"math",index:idx});
-          saveStorage(appData);
-        }
-      }
-      document.getElementById("math-day").innerText = s.day;
-      document.getElementById("math-today").innerText = s.todayDone;
-      renderCheckin("math-checkin", s.day-1);
-    }
-    optWrap.appendChild(b);
-  })
-  renderCheckin("math-checkin", s.day-1);
-  document.getElementById("math-day").innerText = s.day;
-  document.getElementById("math-today").innerText = s.todayDone;
-}
-
-// --------Vocab--------
-function renderVocab(){
-  if(!quizDataReady) return;
-  const s = appData.vocab;
-  if(s.todayDone >= PER_DAY){
-    document.getElementById("vocab-lock").style.display="block";
-    document.getElementById("vocab-qidx").innerText="";
-    document.getElementById("vocab-qicon").innerHTML="";
-    document.getElementById("vocab-opt").innerHTML="";
-    renderCheckin("vocab-checkin", s.day-1);
-    document.getElementById("vocab-day").innerText = s.day;
-    document.getElementById("vocab-today").innerText = s.todayDone;
-    return;
-  }
-  document.getElementById("vocab-lock").style.display="none";
-  const idx = s.pool[s.pos];
-  const item = vocabAll30[idx];
-  document.getElementById("vocab-qidx").innerText = `題目 ${s.pos+1} /30`;
-  document.getElementById("vocab-qicon").innerHTML = item.iconSvg;
-  const optWrap = document.getElementById("vocab-opt");
-  optWrap.innerHTML="";
-  const optsRaw = [item.answer, ...item.distract];
-  const opts = shuffle(optsRaw);
-  opts.forEach(txt=>{
-    const b=document.createElement("button");
-    b.className="choice-btn";
-    b.innerText=txt;
-    b.onclick=()=>{
-      if(txt === item.answer){
-        showReward();
-        s.todayDone++;
-        s.pos++;
-        if(s.todayDone>=PER_DAY){
-          s.day++;
-          s.todayDone=0;
-        }
-        saveStorage(appData);
-        setTimeout(renderVocab,400);
-      }else{
-        alert("再試一試吧！");
-        const exist = appData.globalMistake.some(x=>x.type==="vocab"&&x.index===idx);
-        if(!exist){
-          appData.globalMistake.push({type:"vocab",index:idx});
-          saveStorage(appData);
-        }
-      }
-      document.getElementById("vocab-day").innerText = s.day;
-      document.getElementById("vocab-today").innerText = s.todayDone;
-      renderCheckin("vocab-checkin", s.day-1);
-    }
-    optWrap.appendChild(b);
-  })
-  renderCheckin("vocab-checkin", s.day-1);
-  document.getElementById("vocab-day").innerText = s.day;
-  document.getElementById("vocab-today").innerText = s.todayDone;
-}
-
-// --------EngSent--------
-function renderEngSent(){
-  if(!quizDataReady) return;
-  const s = appData.engsent;
-  if(s.todayDone >= PER_DAY){
-    document.getElementById("engsent-lock").style.display="block";
-    document.getElementById("engsent-qidx").innerText="";
-    document.getElementById("engsent-q").innerHTML="";
-    document.getElementById("engsent-opt").innerHTML="";
-    renderCheckin("engsent-checkin", s.day-1);
-    document.getElementById("engsent-day").innerText = s.day;
-    document.getElementById("engsent-today").innerText = s.todayDone;
-    return;
-  }
-  document.getElementById("engsent-lock").style.display="none";
-  const idx = s.pool[s.pos];
-  const q = engSentQuiz30[idx];
-  document.getElementById("engsent-qidx").innerText = `題目 ${s.pos+1} /30`;
-  document.getElementById("engsent-q").innerHTML = q.q;
-  const optWrap = document.getElementById("engsent-opt");
-  optWrap.innerHTML="";
-  const opts=shuffle(q.opts);
-  opts.forEach(txt=>{
-    const b=document.createElement("button");
-    b.className="choice-btn";
-    b.innerText=txt;
-    b.onclick=()=>{
-      if(txt === q.opts[q.correct]){
-        showReward();
-        s.todayDone++;
-        s.pos++;
-        if(s.todayDone>=PER_DAY){
-          s.day++;
-          s.todayDone=0;
-        }
-        saveStorage(appData);
-        setTimeout(renderEngSent,400);
-      }else{
-        alert("再試一試吧！");
-        const exist = appData.globalMistake.some(x=>x.type==="engsent"&&x.index===idx);
-        if(!exist){
-          appData.globalMistake.push({type:"engsent",index:idx});
-          saveStorage(appData);
-        }
-      }
-      document.getElementById("engsent-day").innerText = s.day;
-      document.getElementById("engsent-today").innerText = s.todayDone;
-      renderCheckin("engsent-checkin", s.day-1);
-    }
-    optWrap.appendChild(b);
-  })
-  renderCheckin("engsent-checkin", s.day-1);
-  document.getElementById("engsent-day").innerText = s.day;
-  document.getElementById("engsent-today").innerText = s.todayDone;
-}
-
-// --------普通話--------
-function renderMand(){
-  if(!quizDataReady) return;
-  const s = appData.mandarin;
-  if(s.todayDone >= PER_DAY){
-    document.getElementById("mand-lock").style.display="block";
-    document.getElementById("mand-qidx").innerText="";
-    document.getElementById("mand-q").innerText="";
-    document.getElementById("mand-opt").innerHTML="";
-    renderCheckin("mand-checkin", s.day-1);
-    document.getElementById("mand-day").innerText = s.day;
-    document.getElementById("mand-today").innerText = s.todayDone;
-    return;
-  }
-  document.getElementById("mand-lock").style.display="none";
-  const idx = s.pool[s.pos];
-  const q = mandQuiz30[idx];
-  document.getElementById("mand-qidx").innerText = `題目 ${s.pos+1} /30`;
-  document.getElementById("mand-q").innerText = q.q;
-  const optWrap = document.getElementById("mand-opt");
-  optWrap.innerHTML="";
-  const opts=shuffle(q.opts);
-  opts.forEach(txt=>{
-    const b=document.createElement("button");
-    b.className="choice-btn";
-    b.innerText=txt;
-    b.onclick=()=>{
-      if(txt === q.opts[q.correct]){
-        showReward();
-        s.todayDone++;
-        s.pos++;
-        if(s.todayDone>=PER_DAY){
-          s.day++;
-          s.todayDone=0;
-        }
-        saveStorage(appData);
-        setTimeout(renderMand,400);
-      }else{
-        alert("再試一試吧！");
-        const exist = appData.globalMistake.some(x=>x.type==="mandarin"&&x.index===idx);
-        if(!exist){
-          appData.globalMistake.push({type:"mandarin",index:idx});
-          saveStorage(appData);
-        }
-      }
-      document.getElementById("mand-day").innerText = s.day;
-      document.getElementById("mand-today").innerText = s.todayDone;
-      renderCheckin("mand-checkin", s.day-1);
-    }
-    optWrap.appendChild(b);
-  })
-  renderCheckin("mand-checkin", s.day-1);
-  document.getElementById("mand-day").innerText = s.day;
-  document.getElementById("mand-today").innerText = s.todayDone;
-}
-
-//--------綜合錯題練習--------
-let mistakeCursor=0;
-let mistakeLocalList=[];
-function renderAllMistake(){
-  if(!quizDataReady) return;
-  mistakeLocalList = [...appData.globalMistake];
-  document.getElementById("allmistake-count").innerText = mistakeLocalList.length;
-  if(mistakeLocalList.length===0){
-    document.getElementById("allmistake-empty").style.display="block";
-    document.getElementById("allmistake-wrap").style.display="none";
-    return;
-  }
-  document.getElementById("allmistake-empty").style.display="none";
-  document.getElementById("allmistake-wrap").style.display="block";
-  if(mistakeCursor >= mistakeLocalList.length){
-    document.getElementById("allmistake-q").innerText="🎉全部錯題做完！奧特曼為你鼓掌";
-    document.getElementById("allmistake-icon").innerHTML="";
-    document.getElementById("allmistake-opt").innerHTML="";
-    document.getElementById("allmistake-qidx").innerText="";
-    mistakeCursor=0;
-    return;
-  }
-  const item = mistakeLocalList[mistakeCursor];
-  let qObj;
-  let subjectName="";
-  let iconHtml="";
-  switch(item.type){
-    case "chinese": qObj = chineseQuiz30[item.index]; subjectName="中文"; break;
-    case "math": qObj = mathQuiz30[item.index]; subjectName="數學"; break;
-    case "vocab": qObj = vocabAll30[item.index]; subjectName="Eng‑Vocab"; iconHtml=qObj.iconSvg; break;
-    case "engsent": qObj = engSentQuiz30[item.index]; subjectName="Eng‑句型"; break;
-    case "mandarin": qObj = mandQuiz30[item.index]; subjectName="普通話"; break;
-  }
-  document.getElementById("allmistake-subject").innerText = subjectName;
-  document.getElementById("allmistake-qidx").innerText = `錯題 ${mistakeCursor+1}`;
-  document.getElementById("allmistake-icon").innerHTML = iconHtml||"";
-  const optWrap = document.getElementById("allmistake-opt");
-  optWrap.innerHTML="";
-  let optsArr,correctAns;
-  if(item.type==="vocab"){
-    optsArr = shuffle([qObj.answer,...qObj.distract]);
-    correctAns = qObj.answer;
-    document.getElementById("allmistake-q").innerText="";
-  }else{
-    optsArr = shuffle(qObj.opts);
-    correctAns = qObj.opts[qObj.correct];
-    document.getElementById("allmistake-q").innerHTML = qObj.q;
-  }
-  optsArr.forEach(txt=>{
-    const b=document.createElement("button");
-    b.className="choice-btn";
-    b.innerText=txt;
-    b.onclick=()=>{
-      if(txt === correctAns){
-        showReward();
-        mistakeCursor++;
-        setTimeout(renderAllMistake,400);
-      }else{
-        alert("再試一試吧！");
-      }
-    };
-    optWrap.appendChild(b);
-  });
-}
-
-document.getElementById("allmistake-clear").addEventListener("click",()=>{
-  if(!appData.globalMistake.length) return;
-  if(!confirm("確定要清空全部錯題本？")) return;
-  appData.globalMistake=[];
-  mistakeCursor=0;
-  saveStorage(appData);
-  renderAllMistake();
-});
-
-document.getElementById("reset-all-progress").addEventListener("click",resetAllData);
-
-//首次載入時從外部 JSON 讀取題庫，再渲染所有科目。
-loadQuizData();
-</script>
+    document.querySelectorAll(".tab-btn").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll(".tab-btn").forEach(b=>b.classList.remove("active"));document.querySelectorAll(".panel").forEach(p=>p.classList.remove("show"));btn.classList.add("active");const target=document.getElementById(btn.dataset.target);target.classList.add("show");if(btn.dataset.target==="tab-all-mistake")renderAllMistake();if(btn.dataset.target==="tab-game")renderGame()}));
+    document.getElementById("allmistake-clear").addEventListener("click",()=>{if(appData.globalMistake.length&&confirm("確定要清空全部錯題本？")){appData.globalMistake=[];mistakeCursor=0;saveStorage();renderAllMistake()}});document.getElementById("reset-all-progress").addEventListener("click",()=>{if(confirm("確定要重置全部練習進度？所有打卡、錯題記錄將全部清除，無法復原！")){localStorage.removeItem(STORAGE_KEY);location.reload()}});
+    async function loadQuizData(){try{const response=await fetch("quiz-data.json",{cache:"no-store"});if(!response.ok)throw new Error(`HTTP ${response.status}`);const data=await response.json();const required=["chinese","math","vocab","engsent","mandarin","ultraman"];if(required.some(k=>!Array.isArray(data[k])||data[k].length!==30))throw new Error("題庫格式錯誤");const hasStoredData=Boolean(localStorage.getItem(STORAGE_KEY));if(hasStoredData&&appData.version!==data.version){alert("題庫已更新，將重置全部練習記錄。");appData=getDefaultData()}appData.version=data.version||"1.0.0";quizData=data;quizDataReady=true;saveStorage();renderAllSubjects();renderAllMistake();updateGameUnlock()}catch(error){console.error("題庫載入失敗：",error);document.querySelectorAll(".question-text").forEach(el=>el.textContent="題庫載入失敗，請以網站伺服器開啟頁面。")}}
+    loadQuizData();
+  </script>
 </body>
 </html>
