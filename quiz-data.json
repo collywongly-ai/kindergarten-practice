@@ -1,5 +1,5 @@
 {
-  "version": "3.0.0",
+  "version": "3.0.1",
   "chinese": [
     {
       "q": "哪一個詞是學校的老師？",
@@ -1862,7 +1862,7 @@
       ]
     },
     {
-      "imgPath": "assets/ultraman.jpeg",
+      "imgPath": "assets/zheta-ultra.jpg",
       "answer": "澤塔奧特曼",
       "distract": [
         "泰迦奧特曼",
@@ -1871,7 +1871,7 @@
       ]
     },
     {
-      "imgPath": "assets/ultraman.jpeg",
+      "imgPath": "assets/oubu-ultra.jpg",
       "answer": "歐布奧特曼",
       "distract": [
         "迪迦奧特曼",
@@ -1889,7 +1889,7 @@
       ]
     },
     {
-      "imgPath": "assets/ultraman.jpeg",
+      "imgPath": "assets/telijia-ultra.jpg",
       "answer": "特利迦奧特曼",
       "distract": [
         "維克特利奧特曼",
@@ -1907,7 +1907,7 @@
       ]
     },
     {
-      "imgPath": "assets/ultraman.jpeg",
+      "imgPath": "assets/yinhe-ultra.jpg",
       "answer": "銀河奧特曼",
       "distract": [
         "羅布奧特曼",
@@ -1916,7 +1916,7 @@
       ]
     },
     {
-      "imgPath": "assets/ultraman.jpeg",
+      "imgPath": "assets/tailuo-ultra.jpg",
       "answer": "泰羅奧特曼",
       "distract": [
         "捷德奧特曼",
@@ -1925,7 +1925,7 @@
       ]
     },
     {
-      "imgPath": "assets/ultraman.jpeg",
+      "imgPath": "assets/beiliya-ultra.jpg",
       "answer": "貝利亞奧特曼",
       "distract": [
         "迪迦奧特曼",
@@ -1934,7 +1934,7 @@
       ]
     },
     {
-      "imgPath": "assets/ultraman.jpeg",
+      "imgPath": "assets/luobu-ultra.jpg",
       "answer": "羅布奧特曼",
       "distract": [
         "捷德奧特曼",
@@ -1943,7 +1943,7 @@
       ]
     },
     {
-      "imgPath": "assets/ultraman.jpeg",
+      "imgPath": "assets/bulu-ultra.jpg",
       "answer": "布魯奧特曼",
       "distract": [
         "羅布奧特曼",
@@ -1952,7 +1952,7 @@
       ]
     },
     {
-      "imgPath": "assets/ultraman.jpeg",
+      "imgPath": "assets/weiketeli-ultra.jpg",
       "answer": "維克特利奧特曼",
       "distract": [
         "泰迦奧特曼",
@@ -1961,7 +1961,7 @@
       ]
     },
     {
-      "imgPath": "assets/ultraman.jpeg",
+      "imgPath": "assets/jiede-ultra.jpg",
       "answer": "捷德奧特曼",
       "distract": [
         "泰羅奧特曼",
@@ -1970,7 +1970,7 @@
       ]
     },
     {
-      "imgPath": "assets/ultraman.jpeg",
+      "imgPath": "assets/zuofei-ultra.jpg",
       "answer": "佐菲奧特曼",
       "distract": [
         "泰羅奧特曼",
@@ -1979,7 +1979,7 @@
       ]
     },
     {
-      "imgPath": "assets/ultraman.jpeg",
+      "imgPath": "assets/geliqiao-ultra.jpg",
       "answer": "格麗喬奧特曼",
       "distract": [
         "羅布奧特曼",
@@ -1988,7 +1988,7 @@
       ]
     },
     {
-      "imgPath": "assets/ultraman.jpeg",
+      "imgPath": "assets/shenglishenguangbang-ultra.jpg",
       "answer": "勝利神光棒",
       "distract": [
         "歐布圓環",
@@ -1997,7 +1997,7 @@
       ]
     },
     {
-      "imgPath": "assets/ultraman.jpeg",
+      "imgPath": "assets/shenguangbang-ultra.jpg",
       "answer": "神光棒",
       "distract": [
         "歐布圓環",
@@ -2006,7 +2006,7 @@
       ]
     },
     {
-      "imgPath": "assets/ultraman.jpeg",
+      "imgPath": "assets/oubuyuanhuan-ultra.jpg",
       "answer": "歐布圓環",
       "distract": [
         "神光棒",
@@ -2015,7 +2015,7 @@
       ]
     },
     {
-      "imgPath": "assets/ultraman.jpeg",
+      "imgPath": "assets/zetawuqi-ultra.jpg",
       "answer": "澤塔昇華器",
       "distract": [
         "神光棒",
@@ -2033,7 +2033,7 @@
       ]
     },
     {
-      "imgPath": "assets/ultraman.jpeg",
+      "imgPath": "assets/shenglihuoju-ultra.jpg",
       "answer": "勝利火炬",
       "distract": [
         "神光棒",
@@ -2042,7 +2042,7 @@
       ]
     },
     {
-      "imgPath": "assets/ultraman.jpeg",
+      "imgPath": "assets/aoteshouzhuo-ultra.jpg",
       "answer": "奧特手鐲",
       "distract": [
         "神光棒",
@@ -2051,7 +2051,7 @@
       ]
     },
     {
-      "imgPath": "assets/ultraman.jpeg",
+      "imgPath": "assets/yuzhou-ultra.jpg",
       "answer": "宇宙英雄奧特曼",
       "distract": [
         "迪迦",
@@ -2060,7 +2060,7 @@
       ]
     },
     {
-      "imgPath": "assets/ultraman.jpeg",
+      "imgPath": "assets/taitasi-ultra.jpg",
       "answer": "泰塔斯奧特曼",
       "distract": [
         "風馬奧特曼",
@@ -2069,7 +2069,7 @@
       ]
     },
     {
-      "imgPath": "assets/ultraman.jpeg",
+      "imgPath": "assets/fengma-ultra.jpg",
       "answer": "風馬奧特曼",
       "distract": [
         "泰迦奧特曼",
@@ -2078,7 +2078,7 @@
       ]
     },
     {
-      "imgPath": "assets/ultraman.jpeg",
+      "imgPath": "assets/luosuo-ultra.jpg",
       "answer": "羅索奧特曼",
       "distract": [
         "布魯奧特曼",
@@ -2087,7 +2087,7 @@
       ]
     },
     {
-      "imgPath": "assets/ultraman.jpeg",
+      "imgPath": "assets/bulu-ultra.jpg",
       "answer": "布魯奧特曼",
       "distract": [
         "羅索奧特曼",
@@ -2096,7 +2096,7 @@
       ]
     },
     {
-      "imgPath": "assets/ultraman.jpeg",
+      "imgPath": "assets/chudai-ultra.jpg",
       "answer": "初代奧特曼",
       "distract": [
         "迪迦奧特曼",
@@ -2105,7 +2105,7 @@
       ]
     },
     {
-      "imgPath": "assets/ultraman.jpeg",
+      "imgPath": "assets/aotezhifu-ultra.jpg",
       "answer": "奧特之父",
       "distract": [
         "泰羅奧特曼",
