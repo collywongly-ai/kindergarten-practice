@@ -52,6 +52,7 @@
 
   <div class="feedback-layer" id="feedback-layer" role="dialog" aria-modal="true" aria-live="polite"><div class="feedback-box"><img id="feedback-image" src="./assets/success.png" width="84" height="84" alt=""><h3 id="feedback-text">太棒啦，相信光，沖啊✨</h3><button class="feedback-close" id="feedback-close" type="button">知道了</button></div></div>
 
+  <script src="./quiz-data-embedded.js"></script>
   <script>
     const PER_DAY=5,TOTAL_DAY=6,STORAGE_KEY="kindergarten_study_data";
     const SUBJECTS={ultramanKnowledge:{label:"奧特曼知識",title:"奧特曼知識(30題)",dataKey:"ultramanKnowledge"},ultramanImageQuiz:{label:"圖片猜奧特曼",title:"圖片猜奧特曼(30題)",dataKey:"ultramanImageQuiz"},chinese:{label:"中文",title:"📖 中文溫習",dataKey:"chinese"},math:{label:"數學",title:"🔢 數學溫習",dataKey:"math"},vocab:{label:"Eng‑Vocab",title:"🔤 English Vocab",dataKey:"vocab"},engsent:{label:"Eng‑句型",title:"🔤 English句型",dataKey:"engsent"},mandarin:{label:"普通話",title:"🎤 普通話溫習",dataKey:"mandarin"}};
@@ -162,7 +163,50 @@
     function finishFocus(message){showFeedback("success",()=>{window.activeFocusGame=null;renderGame()});focusMessage(message||"太棒啦！");}
     document.getElementById("feedback-close").addEventListener("click",closeFeedback);document.getElementById("feedback-layer").addEventListener("click",event=>{if(event.target.id==="feedback-layer")closeFeedback()});document.getElementById("memory-back").addEventListener("click",()=>{window.activeMemoryUnit=null;renderMemoryTraining()});document.querySelectorAll(".tab-btn").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll(".tab-btn").forEach(b=>b.classList.remove("active"));document.querySelectorAll(".panel").forEach(p=>p.classList.remove("show"));btn.classList.add("active");const target=document.getElementById(btn.dataset.target);target.classList.add("show");if(btn.dataset.target==="tab-all-mistake")renderAllMistake();if(btn.dataset.target==="tab-game")renderGame()}));
     document.getElementById("allmistake-clear").addEventListener("click",()=>{if(appData.globalMistake.length&&confirm("確定要清空全部錯題本？")){appData.globalMistake=[];mistakeCursor=0;saveStorage();renderAllMistake()}});document.getElementById("reset-all-progress").addEventListener("click",()=>{if(confirm("確定要重置全部練習進度？所有打卡、錯題記錄將全部清除，無法復原！")){localStorage.removeItem(STORAGE_KEY);location.reload()}});
-    async function loadQuizData(){try{const response=await fetch("quiz-data.json",{cache:"no-store"});if(!response.ok)throw new Error(`HTTP ${response.status}`);const data=await response.json();const required=["ultramanKnowledge","ultramanImageQuiz","chinese","math","vocab","engsent","mandarin"];if(required.some(k=>!Array.isArray(data[k])||data[k].length!==30)||!Array.isArray(data.memoryTrain)||data.memoryTrain.length!==15)throw new Error("題庫格式錯誤");const hasStoredData=Boolean(localStorage.getItem(STORAGE_KEY));if(hasStoredData&&appData.version!==data.version){alert("題庫已更新，將重置全部練習記錄。");appData=getDefaultData()}appData.version=data.version||"4.0.0";quizData=data;quizDataReady=true;saveStorage();renderAllSubjects();renderAllMistake();updateGameUnlock()}catch(error){console.error("題庫載入失敗：",error);document.querySelectorAll(".question-text").forEach(el=>el.textContent="題庫載入失敗，請以網站伺服器開啟頁面。")}};loadQuizData();
+    async function loadQuizData(){
+      try {
+        let data = window.__QUIZ_DATA__ || null;
+        if (!data) {
+          const response = await fetch("quiz-data.json", { cache: "no-store" });
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          data = await response.json();
+        }
+        const required = ["ultramanKnowledge", "ultramanImageQuiz", "chinese", "math", "vocab", "engsent", "mandarin"];
+        if (required.some(k => !Array.isArray(data[k]) || data[k].length !== 30) || !Array.isArray(data.memoryTrain) || data.memoryTrain.length !== 15) {
+          throw new Error("題庫格式錯誤");
+        }
+        const hasStoredData = Boolean(localStorage.getItem(STORAGE_KEY));
+        if (hasStoredData && appData.version !== data.version) {
+          alert("題庫已更新，將重置全部練習記錄。");
+          appData = getDefaultData();
+        }
+        appData.version = data.version || "4.0.0";
+        quizData = data;
+        quizDataReady = true;
+        saveStorage();
+        renderAllSubjects();
+        renderAllMistake();
+        updateGameUnlock();
+      } catch (error) {
+        console.error("題庫載入失敗：", error);
+        const fallbackData = window.__QUIZ_DATA__ || null;
+        if (fallbackData) {
+          const required = ["ultramanKnowledge", "ultramanImageQuiz", "chinese", "math", "vocab", "engsent", "mandarin"];
+          if (required.every(k => Array.isArray(fallbackData[k]) && fallbackData[k].length === 30) && Array.isArray(fallbackData.memoryTrain) && fallbackData.memoryTrain.length === 15) {
+            quizData = fallbackData;
+            quizDataReady = true;
+            renderAllSubjects();
+            renderAllMistake();
+            updateGameUnlock();
+            return;
+          }
+        }
+        document.querySelectorAll(".question-text").forEach(el => {
+          el.textContent = "題庫載入失敗，請以網站伺服器開啟頁面。";
+        });
+      }
+    }
+    loadQuizData();
 
 
     </script>
