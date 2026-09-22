@@ -543,198 +543,6 @@
       "distract": [
         "a desk",
         "listen"
-      ],
-      "memoryTrain": [
-        {
-          "type": "visualMemory",
-          "title": "小動物愛吃甚麼",
-          "instruction": "先觀察完整圖片，記住小動物和食物的位置。",
-          "referenceImage": "memory_game/visual_01_animals_full.png",
-          "correctIds": ["cat-food", "rabbit-carrot"],
-          "candidates": [
-            {"id":"cat-food","label":"小貓吃魚","image":"memory_game/visual_01_animals_full.png","position":"20% 20%"},
-            {"id":"rabbit-carrot","label":"兔仔吃紅蘿蔔","image":"memory_game/visual_01_animals_full.png","position":"80% 20%"},
-            {"id":"dog-bone","label":"小狗吃骨頭","image":"memory_game/visual_01_animals_full.png","position":"20% 80%"},
-            {"id":"bird-seed","label":"小鳥吃種子","image":"memory_game/visual_01_animals_full.png","position":"80% 80%"}
-          ]
-        },
-        {
-          "type": "visualMemory",
-          "title": "廚房的物品不見了",
-          "instruction": "看看廚房大圖，記住桌面上的物品。",
-          "referenceImage": "memory_game/visual_02_kitchen_full.png",
-          "correctIds": ["cup", "spoon"],
-          "candidates": [
-            {"id":"cup","label":"杯子","image":"memory_game/visual_02_kitchen_full.png","position":"20% 20%"},
-            {"id":"spoon","label":"湯匙","image":"memory_game/visual_02_kitchen_full.png","position":"80% 20%"},
-            {"id":"plate","label":"碟子","image":"memory_game/visual_02_kitchen_full.png","position":"20% 80%"},
-            {"id":"pot","label":"煲","image":"memory_game/visual_02_kitchen_full.png","position":"80% 80%"}
-          ]
-        },
-        {
-          "type": "visualMemory",
-          "title": "洗澡時間",
-          "instruction": "觀察浴室圖片，記住出現過的物品。",
-          "referenceImage": "memory_game/visual_03_bathroom_full.png",
-          "correctIds": ["towel", "duck"],
-          "candidates": [
-            {"id":"towel","label":"毛巾","image":"memory_game/visual_03_bathroom_full.png","position":"20% 20%"},
-            {"id":"duck","label":"黃色小鴨","image":"memory_game/visual_03_bathroom_full.png","position":"80% 20%"},
-            {"id":"soap","label":"肥皂","image":"memory_game/visual_03_bathroom_full.png","position":"20% 80%"},
-            {"id":"brush","label":"牙刷","image":"memory_game/visual_03_bathroom_full.png","position":"80% 80%"}
-          ]
-        },
-        {
-          "type": "visualMemory",
-          "title": "誰坐巴士",
-          "instruction": "觀察巴士圖片，記住坐車的人物。",
-          "referenceImage": "memory_game/visual_04_bus_full.png",
-          "correctIds": ["girl", "grandpa"],
-          "candidates": [
-            {"id":"girl","label":"小女孩","image":"memory_game/visual_04_bus_full.png","position":"20% 20%"},
-            {"id":"grandpa","label":"爺爺","image":"memory_game/visual_04_bus_full.png","position":"80% 20%"},
-            {"id":"teacher","label":"老師","image":"memory_game/visual_04_bus_full.png","position":"20% 80%"},
-            {"id":"baby","label":"小嬰兒","image":"memory_game/visual_04_bus_full.png","position":"80% 80%"}
-          ]
-        },
-        {
-          "type": "visualMemory",
-          "title": "漂亮的小女孩",
-          "instruction": "觀察小女孩的造型，記住她身上的物品。",
-          "referenceImage": "memory_game/visual_05_girl_full.png",
-          "correctIds": ["dress", "hairband"],
-          "candidates": [
-            {"id":"dress","label":"裙子","image":"memory_game/visual_05_girl_full.png","position":"20% 20%"},
-            {"id":"hairband","label":"髮帶","image":"memory_game/visual_05_girl_full.png","position":"80% 20%"},
-            {"id":"backpack","label":"書包","image":"memory_game/visual_05_girl_full.png","position":"20% 80%"},
-            {"id":"boots","label":"靴子","image":"memory_game/visual_05_girl_full.png","position":"80% 80%"}
-          ]
-        },
-        {
-          "type": "audioMemory",
-          "title": "保管箱的密碼",
-          "instruction": "聽清楚指令，點選密碼中出現的物件。",
-          "prompt": "請選擇鎖匙和星星。",
-          "correctIds": ["key", "star"],
-          "candidates": [
-            {"id":"key","label":"鎖匙","image":"memory_game/audio_01_safe.png"},
-            {"id":"star","label":"星星","image":"memory_game/audio_01_safe.png"},
-            {"id":"ball","label":"皮球","image":"memory_game/audio_01_safe.png"},
-            {"id":"flower","label":"花朵","image":"memory_game/audio_01_safe.png"}
-          ]
-        },
-        {
-          "type": "audioMemory",
-          "title": "替媽媽買食物",
-          "instruction": "聽媽媽的購物清單，再選出所有食物。",
-          "prompt": "請買蘋果、牛奶和麵包。",
-          "correctIds": ["apple", "milk", "bread"],
-          "candidates": [
-            {"id":"apple","label":"蘋果","image":"memory_game/audio_02_market.png"},
-            {"id":"milk","label":"牛奶","image":"memory_game/audio_02_market.png"},
-            {"id":"bread","label":"麵包","image":"memory_game/audio_02_market.png"},
-            {"id":"toy","label":"玩具","image":"memory_game/audio_02_market.png"}
-          ]
-        },
-        {
-          "type": "audioMemory",
-          "title": "小小設計師",
-          "instruction": "聽清楚設計要求，選出需要的材料。",
-          "prompt": "請選擇紅色紙張、剪刀和膠水。",
-          "correctIds": ["paper", "scissors", "glue"],
-          "candidates": [
-            {"id":"paper","label":"紅色紙張","image":"memory_game/audio_03_designer.png"},
-            {"id":"scissors","label":"剪刀","image":"memory_game/audio_03_designer.png"},
-            {"id":"glue","label":"膠水","image":"memory_game/audio_03_designer.png"},
-            {"id":"ruler","label":"尺","image":"memory_game/audio_03_designer.png"}
-          ]
-        },
-        {
-          "type": "audioMemory",
-          "title": "煮蕃茄炒蛋",
-          "instruction": "聽食譜指令，選出煮菜需要的材料。",
-          "prompt": "請選擇蕃茄、雞蛋和鑊。",
-          "correctIds": ["tomato", "egg", "pan"],
-          "candidates": [
-            {"id":"tomato","label":"蕃茄","image":"memory_game/audio_04_cooking.png"},
-            {"id":"egg","label":"雞蛋","image":"memory_game/audio_04_cooking.png"},
-            {"id":"pan","label":"鑊","image":"memory_game/audio_04_cooking.png"},
-            {"id":"cake","label":"蛋糕","image":"memory_game/audio_04_cooking.png"}
-          ]
-        },
-        {
-          "type": "audioMemory",
-          "title": "收拾書包上學去",
-          "instruction": "聽清楚上學前要放進書包的物品。",
-          "prompt": "請選擇圖書、鉛筆盒和水樽。",
-          "correctIds": ["book", "pencilcase", "bottle"],
-          "candidates": [
-            {"id":"book","label":"圖書","image":"memory_game/audio_05_schoolbag.png"},
-            {"id":"pencilcase","label":"鉛筆盒","image":"memory_game/audio_05_schoolbag.png"},
-            {"id":"bottle","label":"水樽","image":"memory_game/audio_05_schoolbag.png"},
-            {"id":"ball","label":"皮球","image":"memory_game/audio_05_schoolbag.png"}
-          ]
-        },
-        {
-          "type": "sequenceMemory",
-          "title": "走哪一條路去巴士站",
-          "instruction": "聽故事後，按正確路線順序點擊圖片。",
-          "prompt": "先離開家，經過公園，最後到巴士站。",
-          "correctIds": ["home", "park", "bus-stop"],
-          "candidates": [
-            {"id":"home","label":"離開家","image":"memory_game/sequence_01_map.png"},
-            {"id":"park","label":"經過公園","image":"memory_game/sequence_01_map.png"},
-            {"id":"bus-stop","label":"到巴士站","image":"memory_game/sequence_01_map.png"}
-          ]
-        },
-        {
-          "type": "sequenceMemory",
-          "title": "到遊樂場玩",
-          "instruction": "聽事件順序，再依次點擊場景圖片。",
-          "prompt": "先排隊，再玩滑梯，最後盪鞦韆。",
-          "correctIds": ["line", "slide", "swing"],
-          "candidates": [
-            {"id":"line","label":"排隊","image":"memory_game/sequence_02_playground.png"},
-            {"id":"slide","label":"玩滑梯","image":"memory_game/sequence_02_playground.png"},
-            {"id":"swing","label":"盪鞦韆","image":"memory_game/sequence_02_playground.png"}
-          ]
-        },
-        {
-          "type": "sequenceMemory",
-          "title": "快樂的假期",
-          "instruction": "聽完故事，排列假期活動的先後次序。",
-          "prompt": "先收拾行李，再乘車出發，最後到海邊玩。",
-          "correctIds": ["pack", "travel", "beach"],
-          "candidates": [
-            {"id":"pack","label":"收拾行李","image":"memory_game/sequence_03_holiday.png"},
-            {"id":"travel","label":"乘車出發","image":"memory_game/sequence_03_holiday.png"},
-            {"id":"beach","label":"到海邊玩","image":"memory_game/sequence_03_holiday.png"}
-          ]
-        },
-        {
-          "type": "sequenceMemory",
-          "title": "走哪一條路去買東西",
-          "instruction": "按故事先後點擊行程圖片。",
-          "prompt": "先走過馬路，再經過商店，最後到市場買東西。",
-          "correctIds": ["crossing", "shop", "market"],
-          "candidates": [
-            {"id":"crossing","label":"走過馬路","image":"memory_game/sequence_04_shopping.png"},
-            {"id":"shop","label":"經過商店","image":"memory_game/sequence_04_shopping.png"},
-            {"id":"market","label":"到市場","image":"memory_game/sequence_04_shopping.png"}
-          ]
-        },
-        {
-          "type": "sequenceMemory",
-          "title": "積木高高 Go",
-          "instruction": "聽清楚搭積木步驟，依次點擊圖片。",
-          "prompt": "先放底座，再疊中間積木，最後放上三角形屋頂。",
-          "correctIds": ["base", "middle", "roof"],
-          "candidates": [
-            {"id":"base","label":"放底座","image":"memory_game/sequence_05_blocks.png"},
-            {"id":"middle","label":"疊中間積木","image":"memory_game/sequence_05_blocks.png"},
-            {"id":"roof","label":"放三角形屋頂","image":"memory_game/sequence_05_blocks.png"}
-          ]
-        }
       ]
     }
   ],
@@ -2066,4 +1874,196 @@
       ]
     }
   ]
-}
+,
+  "memoryTrain": [
+        {
+          "type": "visualMemory",
+          "title": "小動物愛吃甚麼",
+          "instruction": "先觀察完整圖片，記住小動物和食物的位置。",
+          "referenceImage": "memory_game/visual_01_animals_full.png",
+          "correctIds": ["cat-food", "rabbit-carrot"],
+          "candidates": [
+            {"id":"cat-food","label":"小貓吃魚","image":"memory_game/visual_01_animals_full.png","position":"20% 20%"},
+            {"id":"rabbit-carrot","label":"兔仔吃紅蘿蔔","image":"memory_game/visual_01_animals_full.png","position":"80% 20%"},
+            {"id":"dog-bone","label":"小狗吃骨頭","image":"memory_game/visual_01_animals_full.png","position":"20% 80%"},
+            {"id":"bird-seed","label":"小鳥吃種子","image":"memory_game/visual_01_animals_full.png","position":"80% 80%"}
+          ]
+        },
+        {
+          "type": "visualMemory",
+          "title": "廚房的物品不見了",
+          "instruction": "看看廚房大圖，記住桌面上的物品。",
+          "referenceImage": "memory_game/visual_02_kitchen_full.png",
+          "correctIds": ["cup", "spoon"],
+          "candidates": [
+            {"id":"cup","label":"杯子","image":"memory_game/visual_02_kitchen_full.png","position":"20% 20%"},
+            {"id":"spoon","label":"湯匙","image":"memory_game/visual_02_kitchen_full.png","position":"80% 20%"},
+            {"id":"plate","label":"碟子","image":"memory_game/visual_02_kitchen_full.png","position":"20% 80%"},
+            {"id":"pot","label":"煲","image":"memory_game/visual_02_kitchen_full.png","position":"80% 80%"}
+          ]
+        },
+        {
+          "type": "visualMemory",
+          "title": "洗澡時間",
+          "instruction": "觀察浴室圖片，記住出現過的物品。",
+          "referenceImage": "memory_game/visual_03_bathroom_full.png",
+          "correctIds": ["towel", "duck"],
+          "candidates": [
+            {"id":"towel","label":"毛巾","image":"memory_game/visual_03_bathroom_full.png","position":"20% 20%"},
+            {"id":"duck","label":"黃色小鴨","image":"memory_game/visual_03_bathroom_full.png","position":"80% 20%"},
+            {"id":"soap","label":"肥皂","image":"memory_game/visual_03_bathroom_full.png","position":"20% 80%"},
+            {"id":"brush","label":"牙刷","image":"memory_game/visual_03_bathroom_full.png","position":"80% 80%"}
+          ]
+        },
+        {
+          "type": "visualMemory",
+          "title": "誰坐巴士",
+          "instruction": "觀察巴士圖片，記住坐車的人物。",
+          "referenceImage": "memory_game/visual_04_bus_full.png",
+          "correctIds": ["girl", "grandpa"],
+          "candidates": [
+            {"id":"girl","label":"小女孩","image":"memory_game/visual_04_bus_full.png","position":"20% 20%"},
+            {"id":"grandpa","label":"爺爺","image":"memory_game/visual_04_bus_full.png","position":"80% 20%"},
+            {"id":"teacher","label":"老師","image":"memory_game/visual_04_bus_full.png","position":"20% 80%"},
+            {"id":"baby","label":"小嬰兒","image":"memory_game/visual_04_bus_full.png","position":"80% 80%"}
+          ]
+        },
+        {
+          "type": "visualMemory",
+          "title": "漂亮的小女孩",
+          "instruction": "觀察小女孩的造型，記住她身上的物品。",
+          "referenceImage": "memory_game/visual_05_girl_full.png",
+          "correctIds": ["dress", "hairband"],
+          "candidates": [
+            {"id":"dress","label":"裙子","image":"memory_game/visual_05_girl_full.png","position":"20% 20%"},
+            {"id":"hairband","label":"髮帶","image":"memory_game/visual_05_girl_full.png","position":"80% 20%"},
+            {"id":"backpack","label":"書包","image":"memory_game/visual_05_girl_full.png","position":"20% 80%"},
+            {"id":"boots","label":"靴子","image":"memory_game/visual_05_girl_full.png","position":"80% 80%"}
+          ]
+        },
+        {
+          "type": "audioMemory",
+          "title": "保管箱的密碼",
+          "instruction": "聽清楚指令，點選密碼中出現的物件。",
+          "prompt": "請選擇鎖匙和星星。",
+          "correctIds": ["key", "star"],
+          "candidates": [
+            {"id":"key","label":"鎖匙","image":"memory_game/audio_01_safe.png"},
+            {"id":"star","label":"星星","image":"memory_game/audio_01_safe.png"},
+            {"id":"ball","label":"皮球","image":"memory_game/audio_01_safe.png"},
+            {"id":"flower","label":"花朵","image":"memory_game/audio_01_safe.png"}
+          ]
+        },
+        {
+          "type": "audioMemory",
+          "title": "替媽媽買食物",
+          "instruction": "聽媽媽的購物清單，再選出所有食物。",
+          "prompt": "請買蘋果、牛奶和麵包。",
+          "correctIds": ["apple", "milk", "bread"],
+          "candidates": [
+            {"id":"apple","label":"蘋果","image":"memory_game/audio_02_market.png"},
+            {"id":"milk","label":"牛奶","image":"memory_game/audio_02_market.png"},
+            {"id":"bread","label":"麵包","image":"memory_game/audio_02_market.png"},
+            {"id":"toy","label":"玩具","image":"memory_game/audio_02_market.png"}
+          ]
+        },
+        {
+          "type": "audioMemory",
+          "title": "小小設計師",
+          "instruction": "聽清楚設計要求，選出需要的材料。",
+          "prompt": "請選擇紅色紙張、剪刀和膠水。",
+          "correctIds": ["paper", "scissors", "glue"],
+          "candidates": [
+            {"id":"paper","label":"紅色紙張","image":"memory_game/audio_03_designer.png"},
+            {"id":"scissors","label":"剪刀","image":"memory_game/audio_03_designer.png"},
+            {"id":"glue","label":"膠水","image":"memory_game/audio_03_designer.png"},
+            {"id":"ruler","label":"尺","image":"memory_game/audio_03_designer.png"}
+          ]
+        },
+        {
+          "type": "audioMemory",
+          "title": "煮蕃茄炒蛋",
+          "instruction": "聽食譜指令，選出煮菜需要的材料。",
+          "prompt": "請選擇蕃茄、雞蛋和鑊。",
+          "correctIds": ["tomato", "egg", "pan"],
+          "candidates": [
+            {"id":"tomato","label":"蕃茄","image":"memory_game/audio_04_cooking.png"},
+            {"id":"egg","label":"雞蛋","image":"memory_game/audio_04_cooking.png"},
+            {"id":"pan","label":"鑊","image":"memory_game/audio_04_cooking.png"},
+            {"id":"cake","label":"蛋糕","image":"memory_game/audio_04_cooking.png"}
+          ]
+        },
+        {
+          "type": "audioMemory",
+          "title": "收拾書包上學去",
+          "instruction": "聽清楚上學前要放進書包的物品。",
+          "prompt": "請選擇圖書、鉛筆盒和水樽。",
+          "correctIds": ["book", "pencilcase", "bottle"],
+          "candidates": [
+            {"id":"book","label":"圖書","image":"memory_game/audio_05_schoolbag.png"},
+            {"id":"pencilcase","label":"鉛筆盒","image":"memory_game/audio_05_schoolbag.png"},
+            {"id":"bottle","label":"水樽","image":"memory_game/audio_05_schoolbag.png"},
+            {"id":"ball","label":"皮球","image":"memory_game/audio_05_schoolbag.png"}
+          ]
+        },
+        {
+          "type": "sequenceMemory",
+          "title": "走哪一條路去巴士站",
+          "instruction": "聽故事後，按正確路線順序點擊圖片。",
+          "prompt": "先離開家，經過公園，最後到巴士站。",
+          "correctIds": ["home", "park", "bus-stop"],
+          "candidates": [
+            {"id":"home","label":"離開家","image":"memory_game/sequence_01_map.png"},
+            {"id":"park","label":"經過公園","image":"memory_game/sequence_01_map.png"},
+            {"id":"bus-stop","label":"到巴士站","image":"memory_game/sequence_01_map.png"}
+          ]
+        },
+        {
+          "type": "sequenceMemory",
+          "title": "到遊樂場玩",
+          "instruction": "聽事件順序，再依次點擊場景圖片。",
+          "prompt": "先排隊，再玩滑梯，最後盪鞦韆。",
+          "correctIds": ["line", "slide", "swing"],
+          "candidates": [
+            {"id":"line","label":"排隊","image":"memory_game/sequence_02_playground.png"},
+            {"id":"slide","label":"玩滑梯","image":"memory_game/sequence_02_playground.png"},
+            {"id":"swing","label":"盪鞦韆","image":"memory_game/sequence_02_playground.png"}
+          ]
+        },
+        {
+          "type": "sequenceMemory",
+          "title": "快樂的假期",
+          "instruction": "聽完故事，排列假期活動的先後次序。",
+          "prompt": "先收拾行李，再乘車出發，最後到海邊玩。",
+          "correctIds": ["pack", "travel", "beach"],
+          "candidates": [
+            {"id":"pack","label":"收拾行李","image":"memory_game/sequence_03_holiday.png"},
+            {"id":"travel","label":"乘車出發","image":"memory_game/sequence_03_holiday.png"},
+            {"id":"beach","label":"到海邊玩","image":"memory_game/sequence_03_holiday.png"}
+          ]
+        },
+        {
+          "type": "sequenceMemory",
+          "title": "走哪一條路去買東西",
+          "instruction": "按故事先後點擊行程圖片。",
+          "prompt": "先走過馬路，再經過商店，最後到市場買東西。",
+          "correctIds": ["crossing", "shop", "market"],
+          "candidates": [
+            {"id":"crossing","label":"走過馬路","image":"memory_game/sequence_04_shopping.png"},
+            {"id":"shop","label":"經過商店","image":"memory_game/sequence_04_shopping.png"},
+            {"id":"market","label":"到市場","image":"memory_game/sequence_04_shopping.png"}
+          ]
+        },
+        {
+          "type": "sequenceMemory",
+          "title": "積木高高 Go",
+          "instruction": "聽清楚搭積木步驟，依次點擊圖片。",
+          "prompt": "先放底座，再疊中間積木，最後放上三角形屋頂。",
+          "correctIds": ["base", "middle", "roof"],
+          "candidates": [
+            {"id":"base","label":"放底座","image":"memory_game/sequence_05_blocks.png"},
+            {"id":"middle","label":"疊中間積木","image":"memory_game/sequence_05_blocks.png"},
+            {"id":"roof","label":"放三角形屋頂","image":"memory_game/sequence_05_blocks.png"}
+          ]
+        }
+      ]}
