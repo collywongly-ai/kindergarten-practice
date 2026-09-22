@@ -1763,10 +1763,10 @@
           "referenceImage": "memory_game/visual_01_animals_full.png",
           "correctIds": ["cat-food", "rabbit-carrot"],
           "candidates": [
-            {"id":"cat-food","label":"小貓吃魚","image":"memory_game/visual_01_animals_full.png","position":"20% 20%"},
-            {"id":"rabbit-carrot","label":"兔仔吃紅蘿蔔","image":"memory_game/visual_01_animals_full.png","position":"80% 20%"},
-            {"id":"dog-bone","label":"小狗吃骨頭","image":"memory_game/visual_01_animals_full.png","position":"20% 80%"},
-            {"id":"bird-seed","label":"小鳥吃種子","image":"memory_game/visual_01_animals_full.png","position":"80% 80%"}
+            {"id":"cat-food","label":"小貓吃魚","image":"memory_game/cat.png","position":"20% 20%"},
+            {"id":"rabbit-carrot","label":"兔仔吃紅蘿蔔","image":"memory_game/rabbit.png","position":"80% 20%"},
+            {"id":"dog-bone","label":"老鼠吃蛋糕","image":"memory_game/mouse.png","position":"20% 80%"},
+            {"id":"bird-seed","label":"蛇吃蟲子","image":"memory_game/snake.png","position":"80% 80%"}
           ]
         },
         {
