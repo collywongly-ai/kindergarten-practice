@@ -165,12 +165,9 @@
     document.getElementById("allmistake-clear").addEventListener("click",()=>{if(appData.globalMistake.length&&confirm("確定要清空全部錯題本？")){appData.globalMistake=[];mistakeCursor=0;saveStorage();renderAllMistake()}});document.getElementById("reset-all-progress").addEventListener("click",()=>{if(confirm("確定要重置全部練習進度？所有打卡、錯題記錄將全部清除，無法復原！")){localStorage.removeItem(STORAGE_KEY);location.reload()}});
     async function loadQuizData(){
       try {
-        let data = window.__QUIZ_DATA__ || null;
-        if (!data) {
-          const response = await fetch("quiz-data.json", { cache: "no-store" });
-          if (!response.ok) throw new Error(`HTTP ${response.status}`);
-          data = await response.json();
-        }
+        const response = await fetch("quiz-data.json", { cache: "no-store" });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
         const required = ["ultramanKnowledge", "ultramanImageQuiz", "chinese", "math", "vocab", "engsent", "mandarin"];
         if (required.some(k => !Array.isArray(data[k]) || data[k].length !== 30) || !Array.isArray(data.memoryTrain) || data.memoryTrain.length !== 15) {
           throw new Error("題庫格式錯誤");
