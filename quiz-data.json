@@ -1763,10 +1763,10 @@
           "referenceImage": "memory_game/visual_01_animals_full.png",
           "correctIds": ["cat-food", "rabbit-carrot"],
           "candidates": [
-            {"id":"cat-food","label":"小貓吃魚","image":"memory_game/cat.png","position":"20% 20%"},
-            {"id":"rabbit-carrot","label":"兔仔吃紅蘿蔔","image":"memory_game/rabbit.png","position":"80% 20%"},
-            {"id":"dog-bone","label":"老鼠吃蛋糕","image":"memory_game/mouse.png","position":"20% 80%"},
-            {"id":"bird-seed","label":"蛇吃蟲子","image":"memory_game/snake.png","position":"80% 80%"}
+            {"id":"cat-food","label":"小貓吃魚","image":"memory_game/cat.png"},
+            {"id":"rabbit-carrot","label":"兔仔吃紅蘿蔔","image":"memory_game/rabbit.png"},
+            {"id":"dog-bone","label":"老鼠吃蛋糕","image":"memory_game/mouse.png"},
+            {"id":"bird-seed","label":"蛇吃蟲子","image":"memory_game/snake.png"}
           ]
         },
         {
@@ -1774,12 +1774,12 @@
           "title": "廚房的物品不見了",
           "instruction": "看看廚房大圖，記住桌面上的物品。",
           "referenceImage": "memory_game/visual_02_kitchen_full.png",
-          "correctIds": ["cup", "spoon"],
+          "correctIds": ["plate", "pot"],
           "candidates": [
-            {"id":"cup","label":"杯子","image":"memory_game/visual_02_kitchen_full.png","position":"20% 20%"},
-            {"id":"spoon","label":"湯匙","image":"memory_game/visual_02_kitchen_full.png","position":"80% 20%"},
-            {"id":"plate","label":"碟子","image":"memory_game/visual_02_kitchen_full.png","position":"20% 80%"},
-            {"id":"pot","label":"煲","image":"memory_game/visual_02_kitchen_full.png","position":"80% 80%"}
+            {"id":"cup","label":"這個地方放杯子","image":"memory_game/02bowl.png","position":"20% 20%"},
+            {"id":"spoon","label":"這個地方放湯匙","image":"memory_game/02apple.png","position":"80% 20%"},
+            {"id":"plate","label":"這個地方放碟子","image":"memory_game/02plate.png","position":"20% 80%"},
+            {"id":"pot","label":"這個地方放煲","image":"memory_game/02pot.png","position":"80% 80%"}
           ]
         },
         {
@@ -1787,12 +1787,12 @@
           "title": "洗澡時間",
           "instruction": "觀察浴室圖片，記住出現過的物品。",
           "referenceImage": "memory_game/visual_03_bathroom_full.png",
-          "correctIds": ["towel", "duck"],
+          "correctIds": ["towel", "duck","brush"],
           "candidates": [
-            {"id":"towel","label":"毛巾","image":"memory_game/visual_03_bathroom_full.png","position":"20% 20%"},
-            {"id":"duck","label":"黃色小鴨","image":"memory_game/visual_03_bathroom_full.png","position":"80% 20%"},
-            {"id":"soap","label":"肥皂","image":"memory_game/visual_03_bathroom_full.png","position":"20% 80%"},
-            {"id":"brush","label":"牙刷","image":"memory_game/visual_03_bathroom_full.png","position":"80% 80%"}
+            {"id":"towel","label":"這個地方掛毛巾","image":"memory_game/03towl.png","position":"20% 20%"},
+            {"id":"duck","label":"這個地方有只小鴨","image":"memory_game/03duck.png","position":"80% 20%"},
+            {"id":"soap","label":"這個地方放肥皂","image":"memory_game/03soap.png","position":"20% 80%"},
+            {"id":"brush","label":"這個地方有牙刷","image":"memory_game/03brush.png","position":"80% 80%"}
           ]
         },
         {
@@ -1800,12 +1800,12 @@
           "title": "誰坐巴士",
           "instruction": "觀察巴士圖片，記住坐車的人物。",
           "referenceImage": "memory_game/visual_04_bus_full.png",
-          "correctIds": ["girl", "grandpa"],
+          "correctIds": ["panda", "chicken"],
           "candidates": [
-            {"id":"girl","label":"小女孩","image":"memory_game/visual_04_bus_full.png","position":"20% 20%"},
-            {"id":"grandpa","label":"爺爺","image":"memory_game/visual_04_bus_full.png","position":"80% 20%"},
-            {"id":"teacher","label":"老師","image":"memory_game/visual_04_bus_full.png","position":"20% 80%"},
-            {"id":"baby","label":"小嬰兒","image":"memory_game/visual_04_bus_full.png","position":"80% 80%"}
+            {"id":"panda","label":"第二層第一個是熊貓","image":"memory_game/04panda.png","position":"20% 20%"},
+            {"id":"chicken","label":"第二層第二個是雞","image":"memory_game/04chicken.png","position":"80% 20%"},
+            {"id":"pig","label":"第一層最後一個豬","image":"memory_game/04pig.png","position":"20% 80%"},
+            {"id":"elephant","label":"第一層第三個是大象","image":"memory_game/04elephant.png","position":"80% 80%"}
           ]
         },
         {
@@ -1813,38 +1813,47 @@
           "title": "漂亮的小女孩",
           "instruction": "觀察小女孩的造型，記住她身上的物品。",
           "referenceImage": "memory_game/visual_05_girl_full.png",
-          "correctIds": ["dress", "hairband"],
+          "correctIds": ["dress", "hairband","watch"],
           "candidates": [
-            {"id":"dress","label":"裙子","image":"memory_game/visual_05_girl_full.png","position":"20% 20%"},
-            {"id":"hairband","label":"髮帶","image":"memory_game/visual_05_girl_full.png","position":"80% 20%"},
-            {"id":"backpack","label":"書包","image":"memory_game/visual_05_girl_full.png","position":"20% 80%"},
-            {"id":"boots","label":"靴子","image":"memory_game/visual_05_girl_full.png","position":"80% 80%"}
+            {"id":"dress","label":"穿了裙子","image":"memory_game/05dress.png","position":"20% 20%"},
+            {"id":"hairband","label":"帶了髮帶","image":"memory_game/05hairband.png","position":"80% 20%"},
+            {"id":"watch","label":"手上帶手錶","image":"memory_game/05watch.png","position":"20% 80%"},
+            {"id":"boots","label":"穿了靴子","image":"memory_game/05boots.png","position":"80% 80%"}
           ]
         },
         {
           "type": "audioMemory",
           "title": "保管箱的密碼",
           "instruction": "聽清楚指令，點選密碼中出現的物件。",
-          "prompt": "請選擇鎖匙和星星。",
-          "correctIds": ["key", "star"],
+          "prompt": "請選擇正方形、A、檸檬、7。",
+          "correctIds": ["square", "A", "lemon", "7"],
           "candidates": [
-            {"id":"key","label":"鎖匙","image":"memory_game/audio_01_safe.png"},
-            {"id":"star","label":"星星","image":"memory_game/audio_01_safe.png"},
-            {"id":"ball","label":"皮球","image":"memory_game/audio_01_safe.png"},
-            {"id":"flower","label":"花朵","image":"memory_game/audio_01_safe.png"}
+            {"id":"square","label":"正方形","image":"memory_game/06square.png"},
+            {"id":"triangle","label":"三角形","image":"memory_game/06triangle.png"},
+            {"id":"B","label":"B","image":"memory_game/06B.png"},
+            {"id":"C","label":"C","image":"memory_game/06C.png"},
+            {"id":"A","label":"A","image":"memory_game/06A.png"},
+            {"id":"lemon","label":"檸檬","image":"memory_game/06lemon.png"},
+            {"id":"7","label":"7","image":"memory_game/06seven.png"},
+            {"id":"8","label":"8","image":"memory_game/06eight.png"}
           ]
         },
         {
           "type": "audioMemory",
           "title": "替媽媽買食物",
           "instruction": "聽媽媽的購物清單，再選出所有食物。",
-          "prompt": "請買蘋果、牛奶和麵包。",
-          "correctIds": ["apple", "milk", "bread"],
+          "prompt": "請買魚、菜、玉米、肉、薑、洋蔥和雞。",
+          "correctIds": ["fish", "vegetable", "corn", "meat", "ginger", "onion", "chicken"],
           "candidates": [
-            {"id":"apple","label":"蘋果","image":"memory_game/audio_02_market.png"},
-            {"id":"milk","label":"牛奶","image":"memory_game/audio_02_market.png"},
-            {"id":"bread","label":"麵包","image":"memory_game/audio_02_market.png"},
-            {"id":"toy","label":"玩具","image":"memory_game/audio_02_market.png"}
+            {"id":"fish","label":"魚","image":"memory_game/07fish.png"},
+            {"id":"vegetable","label":"菜","image":"memory_game/07vegetable.png"},
+            {"id":"corn","label":"玉米","image":"memory_game/07corn.png"},
+            {"id":"meat","label":"肉","image":"memory_game/07meat.png"},
+            {"id":"ginger","label":"薑","image":"memory_game/07ginger.png"},
+            {"id":"onion","label":"洋蔥","image":"memory_game/07onion.png"},
+            {"id":"chicken","label":"雞","image":"memory_game/07chicken.png"},
+            {"id":"flower","label":"花朵","image":"memory_game/07flower.png"},
+            {"id":"coke","label":"可樂","image":"memory_game/07coke.png"}
           ]
         },
         {
