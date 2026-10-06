@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0">
-  <title>9 月高班評估輕鬆溫習小樂園｜奧特曼主題溫習</title>
+  <title>奧特曼陪我溫習｜高班評估輕鬆溫習小樂園</title>
   <style>
     :root{--navy:#102a56;--blue:#1769d2;--blue-dark:#0d438f;--red:#c9283d;--yellow:#ffd85a;--ink:#183153;--muted:#5b6b82;--white:#fff;--shadow:0 12px 28px rgba(13,67,143,.14)}
     *{box-sizing:border-box;margin:0;padding:0;font-family:"Noto Sans TC",system-ui,-apple-system,BlinkMacSystemFont,sans-serif}
@@ -23,14 +23,53 @@
     .game-stage{margin-top:18px;padding:18px;border:3px solid #a9c9ed;border-radius:22px;background:#f8fcff;text-align:center}.game-stage svg{max-width:100%;height:auto;touch-action:none}.game-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px}.game-actions .choice-btn{width:auto;min-width:150px}.game-message{min-height:28px;margin-top:12px;color:var(--red);font-size:18px;font-weight:900}.memory-options{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.memory-options .choice-btn{min-width:0;font-size:26px}.memory-unit-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:18px}.memory-unit-card{min-height:142px;padding:16px;text-align:left;border:3px solid #9dc5ee;border-radius:20px;background:#fff;box-shadow:0 5px 0 #d4e6fa;cursor:pointer}.memory-unit-card strong{display:block;color:var(--navy);font-size:17px;line-height:1.35}.memory-unit-card small{display:block;margin-top:8px;color:var(--muted);font-size:13px;line-height:1.45}.memory-unit-card.locked{color:#8292aa;background:#edf2f7;border-color:#c8d2df;box-shadow:0 5px 0 #d8e0e8;cursor:not-allowed;filter:grayscale(1)}.memory-unit-card.locked strong,.memory-unit-card.locked small{color:#8292aa}.memory-training-head{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}.memory-training-head .choice-btn{width:auto;min-width:140px}        .memory-reference{position:relative;max-width:680px;margin:16px auto;padding:10px;border:3px solid #ffd85a;border-radius:20px;background:#fffaf0}.memory-reference img{display:block;width:100%;max-height:48vh;object-fit:contain;border-radius:12px}.memory-countdown{margin-top:10px;color:var(--blue-dark);font-size:20px;font-weight:900}.memory-candidate-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-top:16px}.memory-candidate{min-height:150px;padding:10px;border:3px solid #2472cf;border-radius:18px;background:#fff;color:var(--navy);font-size:16px;font-weight:800;cursor:pointer}.memory-candidate.selected{border-color:var(--red);background:#fff0f2;box-shadow:0 0 0 4px rgba(201,40,61,.15)}.memory-candidate img{display:block;width:100%;height:108px;object-fit:contain;border-radius:10px;margin-bottom:8px;background:#f8fcff}.memory-candidate .candidate-label{display:block}.memory-submit{margin-top:16px}.memory-choice-note{margin-top:10px;color:var(--muted);font-size:14px;font-weight:700}@media (max-width:620px){.memory-unit-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.memory-unit-card{min-height:132px;padding:13px}.memory-unit-card strong{font-size:15px}.memory-candidate-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.memory-candidate{min-height:142px;padding:8px}.memory-candidate img{height:92px}.memory-training-head{align-items:stretch}.memory-training-head .choice-btn{width:100%}}
     @media (max-width:900px){.tab-wrap{grid-template-columns:repeat(4,minmax(0,1fr))}}@media (max-width:620px){body{padding:10px 8px 24px}.banner{min-height:170px;padding:18px 42px 16px;border-radius:24px}.ultra-svg{width:70px;height:70px}.ultra-float{width:38px;height:38px}.tab-wrap{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.tab-btn{min-height:48px;font-size:13px}.panel{padding:16px;border-radius:22px}.level-box{padding:18px 14px}.memory-options{grid-template-columns:repeat(2,1fr)}}@media (max-width:390px){.banner{padding-left:30px;padding-right:30px}.ultra-float{display:none}.tab-btn{font-size:12px}.stat-item{min-width:125px;font-size:13px}}@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
   </style>
+  <style>
+    .month-picker{max-width:1000px;margin:0 auto 16px;padding:14px 18px;border:2px solid #b8d6f4;border-radius:20px;background:rgba(255,255,255,.92);box-shadow:0 5px 0 #dceafa;text-align:center}
+    .month-picker-title{margin-bottom:10px;color:var(--navy);font-size:17px;font-weight:900}
+    .month-picker-options,.storybook-entries{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+    .month-button,.storybook-button{min-height:44px;padding:9px 16px;border:2px solid #9abce5;border-radius:14px;background:#fff;color:var(--navy);font-size:15px;font-weight:900;cursor:pointer;transition:transform .18s,box-shadow .18s,background .18s}
+    .month-button:hover,.storybook-button:not(:disabled):hover{transform:translateY(-2px)}
+    .month-button[data-month="october"]{border-color:#e5a44d}
+    .month-button[aria-pressed="true"]{border-color:#ffd85a;background:linear-gradient(135deg,#1769d2,#0d438f);color:#fff;box-shadow:0 4px 0 #0b3d83}
+    .month-button[data-month="october"][aria-pressed="true"]{border-color:#ffd85a;background:linear-gradient(135deg,#ee8e24,#c64e27);box-shadow:0 4px 0 #9b3b20}
+    .storybook-divider{height:1px;margin:12px 8px;background:#dceafa}
+    .storybook-button{min-height:38px;padding:7px 13px;font-size:14px}
+    .storybook-button:disabled{border-color:#d4dce7;background:#edf1f6;color:#7a8798;box-shadow:none;cursor:not-allowed}
+    .month-toast{min-height:20px;margin-top:8px;color:#1456a0;font-size:13px;font-weight:800}
+    .storybook-dialog{width:min(92vw,620px);max-height:88vh;margin:auto;padding:8px;overflow:hidden;border:3px solid var(--navy);border-radius:24px;background:#fff;box-shadow:0 12px 34px rgba(13,67,143,.3);color:var(--ink)}
+    .storybook-dialog::backdrop{background:rgba(16,42,86,.58)}
+    .storybook-content{display:flex;min-height:480px;max-height:88vh;flex-direction:column}
+    .storybook-heading{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:15px 18px;background:linear-gradient(135deg,#1769d2,#0d438f);color:#fff}
+    .storybook-heading h2{color:inherit}
+    .storybook-close{width:40px;height:40px;border:2px solid rgba(255,255,255,.8);border-radius:50%;background:transparent;color:#fff;font-size:23px;font-weight:900;cursor:pointer}
+    .storybook-page{display:flex;flex:1;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:24px;text-align:center}
+    .storybook-page img{width:100%;max-width:310px;height:210px;object-fit:contain;border-radius:16px;background:#f1f7ff}
+    .storybook-page p{max-width:34ch;color:var(--navy);font-size:21px;font-weight:800;line-height:1.65}
+    .storybook-footer{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 18px;border-top:1px solid #dceafa}
+    .storybook-footer .choice-btn{width:auto;min-width:108px;margin:0}
+    .month-marker{flex-basis:100%;margin-bottom:2px;color:var(--blue-dark);font-size:12px;font-weight:900;text-align:center}
+    .bear-rescue-status{width:100%;margin:0 0 12px;padding:10px;border:2px solid #f0c854;border-radius:14px;background:#fff6d5;color:#704c00;font-size:15px;font-weight:900}
+    @media(max-width:620px){.month-picker{padding:13px 10px}.month-button{flex:1;min-width:140px}.storybook-content{min-height:430px}.storybook-page{padding:18px}.storybook-page img{height:180px}.storybook-page p{font-size:19px}}
+  </style>
 </head>
 <body>
   <div class="banner">
     <svg class="ultra-float" style="top:8px;left:12px" viewBox="0 0 100 100"><circle cx="50" cy="32" r="22" fill="#f0f0f0"/><circle cx="42" cy="28" r="4" fill="red"/><circle cx="58" cy="28" r="4" fill="red"/><path d="M30 54 Q50 46 70 54 L64 88 L36 88 Z" fill="#ef4444"/><path d="M38 56 L62 56 L58 82 L42 82 Z" fill="#f8f8f8"/></svg>
     <svg class="ultra-svg" viewBox="0 0 100 100"><circle cx="50" cy="32" r="22" fill="#f0f0f0"/><circle cx="42" cy="28" r="4" fill="red"/><circle cx="58" cy="28" r="4" fill="red"/><path d="M30 54 Q50 46 70 54 L64 88 L36 88 Z" fill="#ef4444"/><path d="M38 56 L62 56 L58 82 L42 82 Z" fill="#f8f8f8"/></svg>
     <svg class="ultra-float" style="top:8px;right:12px;animation-delay:.8s" viewBox="0 0 100 100"><circle cx="50" cy="32" r="22" fill="#f0f0f0"/><circle cx="42" cy="28" r="4" fill="red"/><circle cx="58" cy="28" r="4" fill="red"/><path d="M30 54 Q50 46 70 54 L64 88 L36 88 Z" fill="#ef4444"/><path d="M38 56 L62 56 L58 82 L42 82 Z" fill="#f8f8f8"/></svg>
-    <p class="banner-kicker">ULTRA STUDY MISSION · K3</p><h1>高班評估輕鬆溫習小樂園<br>奧特曼陪我溫書✨</h1><p class="banner-subtitle">每日完成 5 題，收集你的學習能量！</p>
+    <p class="banner-kicker">ULTRA STUDY MISSION · K3</p><h1>奧特曼陪我溫習 ✨</h1><p class="banner-subtitle">高班評估輕鬆溫習小樂園｜每日完成 5 題，收集你的學習能量！</p>
   </div>
+
+  <section class="month-picker" aria-label="選擇溫習月份">
+    <p class="month-picker-title">請選擇溫習月份</p>
+    <div class="month-picker-options">
+      <button class="month-button" type="button" data-month="september" aria-pressed="true">🔵9月評估</button>
+      <button class="month-button" type="button" data-month="october" aria-pressed="false">🟠10月評估</button>
+    </div>
+    <div class="storybook-divider"></div>
+    <div class="storybook-entries" id="storybook-entries"></div>
+    <p class="month-toast" id="month-toast" role="status" aria-live="polite"></p>
+  </section>
 
   <div class="tab-wrap">
     <button class="tab-btn active" data-target="tab-ultraman-knowledge">奧特曼知識(30題)</button><button class="tab-btn" data-target="tab-ultraman-image-quiz">圖片猜奧特曼(30題)</button><button class="tab-btn" data-target="tab-chinese">中文(30題)</button><button class="tab-btn" data-target="tab-math">數學(30題)</button><button class="tab-btn" data-target="tab-eng-vocab">Eng-Vocab(30題)</button><button class="tab-btn" data-target="tab-eng-sent">Eng - 句型(30題)</button><button class="tab-btn" data-target="tab-mandarin">普通話(30題)</button><button class="tab-btn" data-target="tab-all-mistake">綜合錯題練習</button>    <button class="tab-btn" data-target="tab-game">🎮趣味記憶訓練</button>
@@ -51,13 +90,22 @@
   </section>
 
   <div class="feedback-layer" id="feedback-layer" role="dialog" aria-modal="true" aria-live="polite"><div class="feedback-box"><img id="feedback-image" src="./assets/success.png" width="84" height="84" alt=""><h3 id="feedback-text">太棒啦，相信光，沖啊✨</h3><button class="feedback-close" id="feedback-close" type="button">知道了</button></div></div>
+  <dialog class="storybook-dialog" id="storybook-dialog" aria-labelledby="storybook-title">
+    <div class="storybook-content">
+      <header class="storybook-heading"><h2 id="storybook-title"></h2><button class="storybook-close" id="storybook-close" type="button" aria-label="關閉繪本">×</button></header>
+      <div class="storybook-page"><img id="storybook-image" src="./assets/october-book-rescue.svg" alt="奧特曼和小熊一起尋找小狗"><p id="storybook-text"></p></div>
+      <footer class="storybook-footer"><button class="choice-btn" id="storybook-prev" type="button">上一頁</button><span id="storybook-page-number" aria-live="polite"></span><button class="choice-btn" id="storybook-next" type="button">下一頁</button></footer>
+    </div>
+  </dialog>
 
   <script src="./quiz-data-embedded.js"></script>
   <script>
-    const PER_DAY=5,TOTAL_DAY=6,INITIAL_UNLOCKED_MEMORY_UNITS=5,STORAGE_KEY="kindergarten_study_data";
+    const PER_DAY=5,TOTAL_DAY=6,INITIAL_UNLOCKED_MEMORY_UNITS=5,MONTH_KEY="kindergarten_study_month";
+    let selectedMonth=localStorage.getItem(MONTH_KEY)==="october"?"october":"september";
+    let STORAGE_KEY=`${selectedMonth}_kindergarten_study_data`;
     const SUBJECTS={ultramanKnowledge:{label:"奧特曼知識",title:"奧特曼知識(30題)",dataKey:"ultramanKnowledge"},ultramanImageQuiz:{label:"圖片猜奧特曼",title:"圖片猜奧特曼(30題)",dataKey:"ultramanImageQuiz"},chinese:{label:"中文",title:"📖 中文溫習",dataKey:"chinese"},math:{label:"數學",title:"🔢 數學溫習",dataKey:"math"},vocab:{label:"Eng‑Vocab",title:"🔤 English Vocab",dataKey:"vocab"},engsent:{label:"Eng‑句型",title:"🔤 English句型",dataKey:"engsent"},mandarin:{label:"普通話",title:"🎤 普通話溫習",dataKey:"mandarin"}};
     const MEMORY_TYPES={visualMemory:"視覺記憶",audioMemory:"聽覺記憶",sequenceMemory:"順序記憶"};
-    let quizData={},quizDataReady=false,mistakeCursor=0,mistakeLocalList=[],gameTimer;
+    let quizData={},allQuizData={},quizDataReady=false,mistakeCursor=0,mistakeLocalList=[],gameTimer;
 
     function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
     function getTodayStr(){const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`}
@@ -65,6 +113,7 @@
     function getDefaultData(){return {version:null,lastDate:getTodayStr(),dailyPracticeCount:0,mistakePracticeCompleteCount:INITIAL_UNLOCKED_MEMORY_UNITS,unlockGameCount:INITIAL_UNLOCKED_MEMORY_UNITS,game:{date:getTodayStr(),cycleDay:1,unlocked:true,completed:false},globalMistake:[],...Object.fromEntries(Object.keys(SUBJECTS).map(k=>[k,subjectState()]))}}
     function loadStorage(){let data;try{data=JSON.parse(localStorage.getItem(STORAGE_KEY)||"null")}catch(e){data=null}if(!data)data=getDefaultData();if(!Number.isFinite(Number(data.mistakePracticeCompleteCount)))data.mistakePracticeCompleteCount=INITIAL_UNLOCKED_MEMORY_UNITS;data.mistakePracticeCompleteCount=Math.max(INITIAL_UNLOCKED_MEMORY_UNITS,Math.floor(Number(data.mistakePracticeCompleteCount)));data.unlockGameCount=data.mistakePracticeCompleteCount;Object.keys(SUBJECTS).forEach(k=>{if(!data[k])data[k]=subjectState();if(!data[k].modeMap)data[k].modeMap={};if(!Array.isArray(data[k].assessmentQueue))data[k].assessmentQueue=[]});if(!Array.isArray(data.globalMistake))data.globalMistake=[];if(!data.game)data.game={date:getTodayStr(),cycleDay:1,unlocked:true,completed:false};if(data.lastDate!==getTodayStr()){data.lastDate=getTodayStr();data.dailyPracticeCount=0;Object.keys(SUBJECTS).forEach(k=>{data[k].todayDone=0;data[k].modeMap={};data[k].assessmentMode=false;data[k].assessmentQueue=[];data[k].assessmentIndex=0;data[k].assessmentScore=0});data.game={date:getTodayStr(),cycleDay:(Number(data.game.cycleDay||1)%6)+1,unlocked:true,completed:false}}return data}
     let appData=loadStorage();
+    if(selectedMonth==="september"&&!localStorage.getItem(STORAGE_KEY)){const legacyData=localStorage.getItem("kindergarten_study_data");if(legacyData){try{localStorage.setItem(STORAGE_KEY,legacyData);appData=loadStorage()}catch(error){console.error("舊版溫習記錄遷移失敗：",error)}}}
     function saveStorage(){localStorage.setItem(STORAGE_KEY,JSON.stringify(appData))}
     function renderCheckin(id,day){const el=document.getElementById(id);el.innerHTML="";for(let i=1;i<=TOTAL_DAY;i++){const dot=document.createElement("div");dot.className="checkin-dot"+(i<=Math.min(day,TOTAL_DAY)?" done":"");dot.textContent=i;el.appendChild(dot)}}
     let feedbackCloseHandler=()=>{},feedbackTimer;
@@ -202,6 +251,160 @@
           el.textContent = "題庫載入失敗，請以網站伺服器開啟頁面。";
         });
       }
+    }
+    const MONTH_NAMES={september:"9月評估",october:"10月評估"};
+    const MONTH_STORAGE_KEYS={september:"september_kindergarten_study_data",october:"october_kindergarten_study_data"};
+    const STORYBOOK_PAGES={
+      september:[
+        {text:"奧特曼和好朋友一起來到森林，準備幫助需要幫忙的伙伴。",image:"assets/ultraman.jpeg"},
+        {text:"他們先仔細聽大家說話，再一起想出安全的辦法。",image:"assets/taitasi-ultra.jpg"},
+        {text:"大家輪流分工，收拾散落的物品，也照顧受傷的小動物。",image:"assets/line-up.png"},
+        {text:"任務完成了！奧特曼謝謝每位朋友，大家一起分享快樂。",image:"assets/zheta-ultra.jpg"}
+      ],
+      october:[
+        {text:"小熊聽見小狗在公園裏求救，佢立即去搵奧特曼幫手。",image:"assets/october-book-rescue.svg"},
+        {text:"奧特曼同小熊沿住小路慢慢搵，大家一邊行一邊留意四周。",image:"assets/october-book-rescue.svg"},
+        {text:"原來小狗被困喺矮樹旁邊。奧特曼小心搬開樹枝，小熊溫柔咁安慰佢。",image:"assets/october-book-rescue.svg"},
+        {text:"小狗安全返到主人身邊。小熊好開心，仲多謝奧特曼一齊幫忙！",image:"assets/october-book-rescue.svg"}
+      ]
+    };
+    let storyPageIndex=0;
+    function monthlyDailyLimit(key){return selectedMonth==="october"&&key==="engsent"?10:PER_DAY}
+    function renderCheckin(id,day){
+      const element=document.getElementById(id);element.innerHTML="";
+      const marker=document.createElement("span");marker.className="month-marker";marker.textContent=MONTH_NAMES[selectedMonth];element.appendChild(marker);
+      for(let i=1;i<=TOTAL_DAY;i++){const dot=document.createElement("div");dot.className="checkin-dot"+(i<=Math.min(day,TOTAL_DAY)?" done":"");dot.textContent=i;element.appendChild(dot)}
+    }
+    function ensureMonthProgress(){
+      if(!Number.isFinite(Number(appData.totalCorrectAnswers)))appData.totalCorrectAnswers=0;
+      appData.bookUnlocked=appData.bookUnlocked===true;
+      Object.keys(SUBJECTS).forEach(key=>{if(!appData[key])appData[key]=subjectState()});
+    }
+    function updateMonthLabels(){
+      const label=MONTH_NAMES[selectedMonth];
+      document.querySelectorAll(".month-button").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.month===selectedMonth)));
+      Object.keys(SUBJECTS).forEach(key=>{
+        const checkin=document.getElementById(`${key}-checkin`);
+        if(checkin){let marker=checkin.querySelector(".month-marker");if(!marker){marker=document.createElement("span");marker.className="month-marker";checkin.insertBefore(marker,checkin.firstChild)}marker.textContent=label}
+        const panel=document.getElementById(`tab-${key==="ultramanKnowledge"?"ultraman-knowledge":key==="ultramanImageQuiz"?"ultraman-image-quiz":key==="vocab"?"eng-vocab":key==="engsent"?"eng-sent":key}`);
+        const heading=panel&&panel.querySelector("h2");if(heading&&key==="engsent")heading.textContent=selectedMonth==="october"?`${SUBJECTS[key].title}｜10題闖關`:`${SUBJECTS[key].title}｜每日5題・6天打卡`;
+        const today=document.getElementById(`${key}-today`);if(today&&key==="engsent"){const stat=today.closest(".stat-item");if(stat)stat.lastChild.textContent=`/${monthlyDailyLimit(key)}`}
+        const assessment=document.getElementById(`${key}-assessment-btn`);if(assessment)assessment.textContent=`模擬${selectedMonth==="september"?"9":"10"}月評估`;
+      });
+      renderStorybookEntry();
+    }
+    function renderStorybookEntry(){
+      const root=document.getElementById("storybook-entries");if(!root)return;
+      const unlocked=appData.bookUnlocked===true;
+      const title=selectedMonth==="september"?"奧特曼和好朋友":"小熊救小狗（粵語繪本）";
+      root.innerHTML=`<button type="button" class="storybook-button" id="open-storybook" ${unlocked?"":"disabled"}>${unlocked?`📖 閱讀：${title}`:"🔒 答對10題解鎖繪本"}</button>`;
+      const button=root.querySelector("#open-storybook");if(button&&unlocked)button.addEventListener("click",openStorybook);
+    }
+    function openStorybook(){storyPageIndex=0;document.getElementById("storybook-dialog").showModal();renderStorybookPage()}
+    function renderStorybookPage(){
+      const pages=STORYBOOK_PAGES[selectedMonth],page=pages[storyPageIndex],dialog=document.getElementById("storybook-dialog");
+      document.getElementById("storybook-title").textContent=selectedMonth==="september"?"奧特曼和好朋友":"小熊救小狗";
+      const image=document.getElementById("storybook-image");image.src=`./${page.image}`;image.alt=selectedMonth==="october"?"小熊和奧特曼一起尋找小狗":"奧特曼和朋友一起完成任務";
+      document.getElementById("storybook-text").textContent=page.text;
+      document.getElementById("storybook-page-number").textContent=`${storyPageIndex+1} / ${pages.length}`;
+      document.getElementById("storybook-prev").disabled=storyPageIndex===0;
+      document.getElementById("storybook-next").textContent=storyPageIndex===pages.length-1?"讀完了":"下一頁";
+      if(dialog.open&&selectedMonth==="october")speakText(page.text);
+    }
+    function recordCorrectAnswer(key,idx,answer,mode){
+      const state=appData[key];state.todayDone++;state.pos++;appData.dailyPracticeCount=(appData.dailyPracticeCount||0)+1;
+      appData.totalCorrectAnswers++;
+      if(appData.totalCorrectAnswers>=10)appData.bookUnlocked=true;
+      if(state.todayDone>=monthlyDailyLimit(key)){state.todayDone=0;state.day=Math.min(state.day+1,TOTAL_DAY);if(state.day>=TOTAL_DAY)state.assessmentUnlocked=true}
+      saveStorage();updateGameUnlock();updateMonthLabels();
+    }
+    function handleCorrectAnswer(key,idx,answer,mode){recordCorrectAnswer(key,idx,answer,mode);showFeedback("success",()=>renderSubject(key))}
+    function finishStandardQuestion(key,idx){handleCorrectAnswer(key,idx,"",null)}
+    function balancedOptions(item,index){const target=index%3,choices=[item.answer,...item.distract],out=[];out[target]=item.answer;let wrong=choices.filter(value=>value!==item.answer);for(let i=0;i<3;i++)if(i!==target)out[i]=wrong.shift();return out}
+    function renderTextQuiz(key){
+      const state=appData[key];updateSubjectStats(key,state);const lock=document.getElementById(`${key}-lock`);
+      if(state.todayDone>=monthlyDailyLimit(key)){lock.style.display="block";document.getElementById(`${key}-qidx`).textContent="";document.getElementById(`${key}-q`).textContent="";document.getElementById(`${key}-icon`).innerHTML="";document.getElementById(`${key}-opt`).innerHTML="";return}
+      lock.style.display="none";const index=state.pool[state.pos%30],item=quizData[SUBJECTS[key].dataKey][index];
+      document.getElementById(`${key}-qidx`).textContent=`題目 ${(state.pos%30)+1} /30`;document.getElementById(`${key}-icon`).innerHTML="";document.getElementById(`${key}-q`).textContent=item.q||"";
+      const options=document.getElementById(`${key}-opt`);options.innerHTML="";
+      shuffle(item.opts).forEach(text=>{const button=document.createElement("button");button.type="button";button.className="choice-btn";button.textContent=text;button.onclick=()=>text===item.opts[item.correct]?handleCorrectAnswer(key,index,text,null):(addMistake(key,index,null),showFeedback("fail"));options.appendChild(button)})
+    }
+    function renderAssetVocab(key){
+      const state=appData[key];updateSubjectStats(key,state);if(state.todayDone>=monthlyDailyLimit(key)){document.getElementById(`${key}-lock`).style.display="block";clearQuestion(key);return}
+      document.getElementById(`${key}-lock`).style.display="none";const index=state.pool[state.pos%30],item=quizData.vocab[index];document.getElementById(`${key}-qidx`).textContent=`題目 ${(state.pos%30)+1} /30`;clearQuestion(key);
+      const icon=document.getElementById(`${key}-icon`);icon.appendChild(assetImage(item.imgPath,item.answer));document.getElementById(`${key}-q`).textContent=selectedMonth==="october"?"看圖選出正確的英文單詞":"";
+      const options=document.getElementById(`${key}-opt`);const choices=selectedMonth==="october"?balancedOptions(item,index):shuffle([item.answer,...item.distract]);
+      choices.forEach(text=>{const button=document.createElement("button");button.type="button";button.className="choice-btn";button.textContent=text;button.onclick=()=>{
+        if(selectedMonth==="october"){options.querySelectorAll("button").forEach(option=>option.disabled=true);playEnglishVoice(text);setTimeout(()=>{options.querySelectorAll("button").forEach(option=>option.disabled=false);if(text===item.answer)finishStandardQuestion(key,index);else{addMistake(key,index,null);showFeedback("fail")}},550);return}
+        if(text===item.answer)finishStandardQuestion(key,index);else{addMistake(key,index,null);showFeedback("fail")}
+      };options.appendChild(button)})
+    }
+    function renderAssetImageQuiz(key){
+      const state=appData[key];updateSubjectStats(key,state);if(state.todayDone>=monthlyDailyLimit(key)){document.getElementById(`${key}-lock`).style.display="block";clearQuestion(key);return}
+      document.getElementById(`${key}-lock`).style.display="none";const index=state.pool[state.pos%30],item=quizData[SUBJECTS[key].dataKey][index];document.getElementById(`${key}-qidx`).textContent=`題目 ${(state.pos%30)+1} /30`;clearQuestion(key);
+      const icon=document.getElementById(`${key}-icon`);icon.appendChild(assetImage(item.imgPath,item.answer));document.getElementById(`${key}-q`).textContent=selectedMonth==="october"?({"backpack":"奧特曼正在整理書包，哪個做法正確？","handwash":"奧特曼準備用餐，哪個做法正確？","sharing":"奧特曼和朋友一起玩，哪個做法正確？","lineup":"奧特曼和同學排隊，哪個做法正確？","care":"奧特曼使用班房物品，哪個做法正確？"}[item.imgPath.split("-").pop().replace(".svg","")]||"看看生活場景，奧特曼應該怎樣做？"):"看圖猜奧特曼";
+      const choices=selectedMonth==="october"?balancedOptions(item,index):shuffle([item.answer,...item.distract]);const options=document.getElementById(`${key}-opt`);
+      choices.forEach(text=>{const button=document.createElement("button");button.type="button";button.className="choice-btn";button.textContent=text;button.onclick=()=>{if(text===item.answer)finishStandardQuestion(key,index);else{if(selectedMonth==="october")addMistake(key,index,null);showFeedback("fail")}};options.appendChild(button)})
+    }
+    function renderAssetSentence(key){
+      const state=appData[key];updateSubjectStats(key,state);const limit=monthlyDailyLimit(key),lock=document.getElementById(`${key}-lock`);
+      lock.textContent=selectedMonth==="october"?"🏆 今日闖關完成！已收集10枚光之碎片，擊退小怪並救回小熊！":"🔒今天挑戰已完成！下一次挑戰請明天開始";
+      if(state.todayDone>=limit){lock.style.display="block";clearQuestion(key);return}
+      document.getElementById(`${key}-lock`).style.display="none";const index=state.pool[state.pos%30],item=quizData.engsent[index];document.getElementById(`${key}-qidx`).textContent=`題目 ${(state.pos%30)+1} /30`;clearQuestion(key);
+      const icon=document.getElementById(`${key}-icon`),question=document.getElementById(`${key}-q`),options=document.getElementById(`${key}-opt`);
+      if(selectedMonth==="october"){
+        const status=document.createElement("div");status.className="bear-rescue-status";const defeated=Math.floor(state.todayDone/3);status.textContent=`🐻 救援進度　光之碎片 ${state.todayDone}/10　${"👾".repeat(Math.max(0,3-defeated))||"✨"}　小熊等待救援`;icon.appendChild(status)
+      }
+      question.textContent=selectedMonth==="october"?item.q:item.type==="audio2option"?"聽句型，選擇正確句子":"聽句型，點擊正確圖片";
+      if(item.type==="audio2option")icon.appendChild(assetImage(item.qImg,item.q));
+      const listen=document.createElement("button");listen.type="button";listen.className="choice-btn";listen.textContent=item.type==="audio2option"?"🔊 聽題目句子":"🔊 重播題目句子";listen.onclick=()=>playAudioOrSpeech(item.qAudio,sentenceFallbackText(item));options.appendChild(listen);
+      item.opts.forEach((choice,choiceIndex)=>{
+        const submit=()=>{if(choiceIndex===item.correct)finishStandardQuestion(key,index);else{addMistake(key,index,null);showFeedback("fail")}};
+        if(item.type==="audio2option"){
+          const button=document.createElement("div");button.className="choice-btn";button.tabIndex=0;button.setAttribute("role","button");
+          const text=document.createElement("span");text.textContent=choice.text;button.appendChild(text);
+          const audio=document.createElement("button");audio.type="button";audio.textContent="🔊 聆聽";audio.style.marginLeft="10px";audio.onclick=event=>{event.stopPropagation();playAudioOrSpeech(choice.audio,choice.text)};button.appendChild(audio);
+          button.onclick=submit;button.onkeydown=event=>{if(event.key==="Enter"||event.key===" "){event.preventDefault();submit()}};options.appendChild(button)
+        }else{
+          const button=document.createElement("button");button.type="button";button.className="choice-btn";button.appendChild(assetImage(choice.img,item.q,"q-icon-main"));button.setAttribute("aria-label",`選項 ${choiceIndex+1}`);button.onclick=submit;options.appendChild(button)
+        }
+      });
+      playAudioOrSpeech(item.qAudio,sentenceFallbackText(item))
+    }
+    function showAssessmentFeedback(score,total){const text=`模擬${selectedMonth==="september"?"9":"10"}月評估：${score}/${total}，${score>=Math.ceil(total*.7)?"表現很好，繼續保持！":"再多聽一遍英文吧，奧特曼陪你加油！"}`;document.getElementById("feedback-image").src=score>=Math.ceil(total*.7)?"./assets/success.png":"./assets/fail.png";document.getElementById("feedback-text").textContent=text;document.getElementById("feedback-close").textContent="完成";document.getElementById("feedback-layer").classList.add("open");feedbackCloseHandler=()=>{};speakText(score>=Math.ceil(total*.7)?"模擬評估完成，表現很好":"模擬評估完成，再多聽一遍英文吧")}
+    function switchMonth(month){
+      if(!allQuizData[month]||month===selectedMonth)return;saveStorage();selectedMonth=month;STORAGE_KEY=MONTH_STORAGE_KEYS[month];localStorage.setItem(MONTH_KEY,month);appData=loadStorage();ensureMonthProgress();appData.version=allQuizData[month].version||"5.0.0";quizData=allQuizData[month];mistakeCursor=0;window.activeMemoryUnit=null;
+      updateMonthLabels();renderAllSubjects();renderAllMistake();updateGameUnlockDisplay();if(document.getElementById("tab-game").classList.contains("show"))renderGame();
+      const toast=document.getElementById("month-toast");toast.textContent=`已切換到${MONTH_NAMES[month]}溫習，打卡記錄會獨立計算✨`;clearTimeout(window.monthToastTimer);window.monthToastTimer=setTimeout(()=>toast.textContent="",2600);
+      const dialog=document.getElementById("storybook-dialog");if(dialog.open)dialog.close()
+    }
+    function initializeMonthControls(){
+      document.querySelectorAll(".month-button").forEach(button=>button.addEventListener("click",()=>switchMonth(button.dataset.month)));
+      document.getElementById("storybook-close").addEventListener("click",()=>document.getElementById("storybook-dialog").close());
+      document.getElementById("storybook-prev").addEventListener("click",()=>{if(storyPageIndex>0){storyPageIndex--;renderStorybookPage()}});
+      document.getElementById("storybook-next").addEventListener("click",()=>{if(storyPageIndex<STORYBOOK_PAGES[selectedMonth].length-1){storyPageIndex++;renderStorybookPage()}else document.getElementById("storybook-dialog").close()});
+      document.getElementById("reset-all-progress").addEventListener("click",event=>{
+        event.stopImmediatePropagation();
+        if(confirm("確定要重置9月及10月全部練習進度？所有打卡、錯題記錄和繪本解鎖將全部清除，無法復原！")){
+          localStorage.removeItem(MONTH_STORAGE_KEYS.september);localStorage.removeItem(MONTH_STORAGE_KEYS.october);localStorage.removeItem("kindergarten_study_data");location.reload()
+        }
+      },true);
+      updateMonthLabels()
+    }
+    async function loadQuizData(){
+      try{
+        const response=await fetch("quiz-data.json",{cache:"no-store"});if(!response.ok)throw new Error(`HTTP ${response.status}`);
+        allQuizData=await response.json()
+      }catch(error){
+        console.error("題庫載入失敗，改用內嵌題庫：",error);allQuizData=window.__QUIZ_DATA__||null;
+      }
+      const required=["ultramanKnowledge","ultramanImageQuiz","chinese","math","vocab","engsent","mandarin"];
+      if(!allQuizData||["september","october"].some(month=>!allQuizData[month]||required.some(key=>!Array.isArray(allQuizData[month][key])||allQuizData[month][key].length!==30)||!Array.isArray(allQuizData[month].memoryTrain)||allQuizData[month].memoryTrain.length!==15)){
+        console.error("題庫格式錯誤：兩個月份都必須包含七個30題模組和15個記憶單元。");
+        document.querySelectorAll(".question-text").forEach(element=>element.textContent="題庫載入失敗，請檢查題庫檔案。");return
+      }
+      STORAGE_KEY=MONTH_STORAGE_KEYS[selectedMonth];ensureMonthProgress();appData.version=allQuizData[selectedMonth].version||"5.0.0";quizData=allQuizData[selectedMonth];quizDataReady=true;
+      initializeMonthControls();saveStorage();renderAllSubjects();renderAllMistake();updateGameUnlockDisplay()
     }
     loadQuizData();
 
